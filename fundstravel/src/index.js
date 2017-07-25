@@ -7,8 +7,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 import axios from 'axios'
 
-axios.get('/api/test')
-.then(response => {console.log(response)})
+// axios.get('/api/test')
+// .then(response => {console.log(response)})
 
 
 ReactDOM.render(
