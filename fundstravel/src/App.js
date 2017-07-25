@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 
-
+import Home from './components/Home/Home';
 import NavBar from "./components/NavBar/NavBar";
 
 import Packages from './components/Packages/Packages';
@@ -14,11 +14,7 @@ class App extends Component {
     return (
       <div className="App">
 
-      <NavBar />
-
-
-            <Packages />
-
+      <Home />
       </div>
     );
   }
