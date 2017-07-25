@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './Splash.css'
 
 
-export defualt class Splash extends Component {
+export default class Splash extends Component {
 
   render() {
     return (
