@@ -1,0 +1,41 @@
+.splashHeader {
+  padding: 5%;
+  width: 100vw;
+
+  font-size: 2em;
+  position: center;
+  text-align: center;
+}
+
+
+
+
+.login {
+  padding-right: 3px;
+  /*float: right;*/
+  margin-top: 2%;
+  float: right;
+}
+
+input {
+  margin-top: 2%;
+  float: right;
+}
+
+
+.loginButton {
+
+}
+
+
+
+.joinButton {
+
+}
+
+.about {
+
+  padding: 8%;
+  font-size: 1.4em;
+  line-height: 200%;
+}
