@@ -5,6 +5,8 @@ import {Switch, Route} from 'react-router-dom'
 import './App.css';
 
 
+import Splash from './components/Splash/Splash'
+
 import Home from './components/Home/Home';
 
 import NavBar from "./components/NavBar/NavBar";
@@ -23,6 +25,7 @@ class App extends Component {
 
            <Route exact path="/signup" component={Signup} />
            <Route exact path="/home" component={Home} />
+           <Route exact path="/welcome" component={Splash} />
         </Switch>
 
       </div>
