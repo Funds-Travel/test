@@ -1,0 +1,40 @@
+
+
+.logo {
+  font-size: 3em;
+  padding-bottom: 8%;
+}
+
+.about {
+
+  padding: 8% 15% 10% 15%;
+  font-size: 1.4em;
+  line-height: 200%;
+}
+
+
+
+.login {
+  padding-right: 10px;
+  /*float: right;*/
+  margin-top: 2%;
+  float: right;
+}
+
+input {
+  margin-top: 2%;
+  float: right;
+  margin-right: 2px;
+
+}
+
+
+.loginButton {
+
+}
+
+
+
+.joinButton {
+   font-size: 1.5em;
+}
