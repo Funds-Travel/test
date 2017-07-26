@@ -9,9 +9,9 @@ import Splash from './components/Splash/Splash'
 
 import Home from './components/Home/Home';
 
-import NavBar from "./components/NavBar/NavBar";
+// import NavBar from "./components/NavBar/NavBar";
 
-import Packages from './components/Packages/Packages';
+// import Packages from './components/Packages/Packages';
 
 import Signup from './components/Signup/Signup';
 
