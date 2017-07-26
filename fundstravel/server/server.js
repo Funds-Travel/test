@@ -5,17 +5,21 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive')
 const config = require('../config')
-const connectionString = require('../config')
+const serverCtrl = require('./serverCtrl')
 const app = express();
 
-massive(connectionString)
-.then(function(dbInstance) {
-    app.set('db', dbInstance)
+massive(config.connectionString)
+.then(function(db) {
+    app.set('db', db)
 });
 
+app.use(cors())
+app.use(bodyParser.json())
 // app.get('/api/test', function(req, res, next){
 //     res.send('testing !!')
 // })
+
+app.post('/api/traveler', serverCtrl.createTraveler)
 
 app.listen(3001, function() {
     console.log("listening from Server")
