@@ -15,11 +15,12 @@ massive(config.connectionString)
 
 app.use(cors())
 app.use(bodyParser.json())
-// app.get('/api/test', function(req, res, next){
-//     res.send('testing !!')
-// })
 
+// endpoints
+app.get('/api/packages', serverCtrl.getPackage)
+app.get('/api/user/:email', serverCtrl.getUser)
 app.post('/api/traveler', serverCtrl.createTraveler)
+
 
 app.listen(3001, function() {
     console.log("listening from Server")
