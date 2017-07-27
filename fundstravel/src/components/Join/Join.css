@@ -1,0 +1,72 @@
+.background-video{
+height: 100%;
+width: 100%;
+float: left;
+top: 0;
+padding: none;
+position: fixed;
+
+
+}
+
+.borderDiv {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 5% 25% 25% 25%;
+
+  margin: 0;
+  height: 80vh;
+  background-image: url("http://www.daoulaba.com/i/2017/05/blurred-city-lights-wallpaper-wide.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.input {
+
+  background-color: black;
+  margin: 0;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  size: 2em;
+  font-size: 2em;
+  border: 2px solid black;
+  border-radius: 4%;
+  opacity: .68;
+
+}
+
+.inputStyle {
+  margin-bottom: 10%;
+  padding: 10px;
+  font-size: .6em;
+  opacity: .9;
+}
+
+.email {
+  padding-right: 90%;
+  color: white;
+}
+
+.password {
+  padding-right: 90%;
+  color: white;
+}
+
+.confirm {
+  padding-right: 90%;
+  color: white;
+}
+
+.submitButton {
+  font-size:  .7em;
+  background-color: #34fd02;
+  opacity: 1;
+
+}

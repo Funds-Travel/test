@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 
 import './App.css';
 
+import Join from './components/Join/Join';
 
 import Splash from './components/Splash/Splash'
 
@@ -26,6 +27,7 @@ class App extends Component {
            <Route exact path="/signup" component={Signup} />
            <Route exact path="/home" component={Home} />
            <Route exact path="/welcome" component={Splash} />
+           <Route exact path="/join" component={Join} />
         </Switch>
 
       </div>

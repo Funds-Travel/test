@@ -5,10 +5,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive')
 const config = require('../config')
-const connectionString = require('../config')
+// const connectionString = require('../config')
 const app = express();
 
-massive(connectionString)
+massive(config.connectionString)
 .then(function(dbInstance) {
     app.set('db', dbInstance)
 });
