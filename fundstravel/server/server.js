@@ -20,6 +20,7 @@ massive(config.connectionString)
 
 app.use(cors())
 app.use(bodyParser.json())
+
 app.use(expressSession({secret: config.sessionSecret,
   resave: false,
   saveUninitialized: false}))
@@ -81,7 +82,12 @@ passport.deserializeUser(function(obj, done) {
 //     res.send('testing !!')
 // })
 
+
+// endpoints
+app.get('/api/packages', serverCtrl.getPackage)
+app.get('/api/user/:email', serverCtrl.getUser)
 app.post('/api/traveler', serverCtrl.createTraveler)
+
 
 app.listen(3001, function() {
     console.log("listening from Server")
