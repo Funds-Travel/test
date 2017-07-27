@@ -14,7 +14,7 @@ import Home from './components/Home/Home';
 
 // import Packages from './components/Packages/Packages';
 
-import Signup from './components/Signup/Signup';
+
 
 class App extends Component {
   render() {
@@ -24,7 +24,6 @@ class App extends Component {
 
         <Switch>
 
-           <Route exact path="/signup" component={Signup} />
            <Route exact path="/home" component={Home} />
            <Route exact path="/welcome" component={Splash} />
            <Route exact path="/join" component={Join} />
