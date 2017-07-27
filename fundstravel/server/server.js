@@ -12,6 +12,7 @@ const serverCtrl = require('./serverCtrl');
 const app = express();
 
 let db;
+
 massive(config.connectionString)
 .then(function(dbInstance) {
   db = dbInstance;
