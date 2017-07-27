@@ -1,18 +1,54 @@
 import React, { Component } from 'react';
-
+import { withRouter } from 'react-router-dom';
+import axios from 'axios';
 import './Splash.css'
 
 
-export default class Splash extends Component {
-
+class Splash extends Component {
+constructor() {
+  super()
+  this.state = {
+    password: '',
+    email: ''
+  }
+  this.changeUserName = this.changeUserName.bind(this)
+  this.changePassword = this.changePassword.bind(this)
+  this.handleClick = this.handleClick.bind(this)
+}
+changeUserName(e) {
+  this.setState({email: e.target.value})
+}
+changePassword(e) {
+  this.setState({password: e.target.value})
+}
+handleClick() {
+  axios.post('/welcome', {
+    email: this.state.email,
+    password: this.state.password
+  })
+  .then(response => { 
+    console.log(response)
+    if (response.data.email) {
+      this.props.history.push('/home');
+    }
+  })
+  .catch(function(error) {
+    console.log(error)
+  })
+}
   render() {
     return (
       <div>
 
         <div className="login">
-          <button className="login">Login</button>
-          <input className="" placeholder="Password"></input>
-          <input className="" placeholder="Username"></input>
+          <button onClick={this.handleClick}
+                className="login">Login</button>
+          <input value={this.state.password}
+                onChange={this.changePassword}
+                className="" placeholder="Password"></input>
+          <input value={this.state.email}
+                onChange={this.changeUserName}
+                className="" placeholder="Username"></input>
         </div>
 
 
@@ -43,3 +79,6 @@ Aperiam recusabo postulant id qui, idque adipisci ea nec. Est ea dicit disputati
     )
   }
 }
+
+
+export default withRouter(Splash)
