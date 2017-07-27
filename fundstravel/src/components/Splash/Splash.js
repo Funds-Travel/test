@@ -26,7 +26,7 @@ handleClick() {
     email: this.state.email,
     password: this.state.password
   })
-  .then(response => { 
+  .then(response => {
     console.log(response)
     if (response.data.email) {
       this.props.history.push('/home');
@@ -38,7 +38,7 @@ handleClick() {
 }
   render() {
     return (
-      <div>
+      <div className="background">
 
         <div className="login">
           <button onClick={this.handleClick}
@@ -57,6 +57,11 @@ handleClick() {
 
           <div className="logo">
             Splash Page
+
+
+
+
+
           </div>
 
 
@@ -68,9 +73,7 @@ Aperiam recusabo postulant id qui, idque adipisci ea nec. Est ea dicit disputati
 
         </div>
 
-            <div>
-              <button className="joinButton"> Join Us </button>
-            </div>
+
 
 
       </div>

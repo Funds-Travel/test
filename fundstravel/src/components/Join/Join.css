@@ -9,28 +9,27 @@ position: fixed;
 
 }*/
 
+
 .borderDiv {
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: 5% 25% 25% 25%;
-
+  padding: 0% 25% 25% 25%;
   margin: 0;
-  height: 80vh;
+  height: 100vh;
+
   background-image: url("http://www.daoulaba.com/i/2017/05/blurred-city-lights-wallpaper-wide.jpg");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .input {
 
   background-color: black;
   margin: 0;
-  padding: 4%;
+  padding: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +39,9 @@ position: fixed;
   border-radius: 4%;
   opacity: .68;
 
+  background-repeat: no-repeat;
+  overflow: hidden;
+
 }
 
 .inputStyle {
@@ -47,6 +49,13 @@ position: fixed;
   padding: 10px;
   font-size: .6em;
   opacity: .9;
+}
+
+.header {
+  color: white;
+  opacity: 1;
+  padding-bottom: 8%;
+  /*padding: 5%;*/
 }
 
 .email {
@@ -65,8 +74,9 @@ position: fixed;
 }
 
 .submitButton {
-  font-size:  .7em;
+  font-size:  .6em;
   background-color: #34fd02;
   opacity: 1;
+  padding-bottom: 1%;
 
 }

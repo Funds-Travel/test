@@ -10,12 +10,13 @@ export default class Join extends Component {
     return (
 
       <div className="borderDiv">
-        Create An Account
+
 
 
 
           <div className="input">
-
+            <div className="header"> Create Account </div>
+            
               <div className="email">  Email </div>
 
           <input className="inputStyle" placeholder ="Enter Email" />
