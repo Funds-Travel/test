@@ -1,0 +1,22 @@
+
+.eachPackageDiv {
+  margin: 0;
+  width: 80vw;
+  height: 35vh;
+  /*text-align: center;*/
+  border: 2px solid black;
+}
+ul {
+  list-style-type: none;
+}
+
+img {
+  height: 35vh;
+  max-width: 20vw;
+  object-fit: contain;
+  float: left;
+}
+
+.descriptionSpan {
+  float: right;
+}
