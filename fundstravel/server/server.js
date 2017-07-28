@@ -98,6 +98,8 @@ passport.deserializeUser(function(obj, done) {
 app.get('/api/packages', serverCtrl.getPackage)
 app.get('/api/user/:email', serverCtrl.getUser)
 app.post('/api/traveler', serverCtrl.createTraveler)
+app.post('/api/addFunds/:user_id', serverCtrl.addFunds)
+
 
 
 app.listen(3001, function() {
