@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import axios from 'axios'
+// import axios from 'axios'
 
 // axios.get('/api/test')
 // .then(response => {console.log(response)})
