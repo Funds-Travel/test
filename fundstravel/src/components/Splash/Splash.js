@@ -26,7 +26,7 @@ handleClick() {
     email: this.state.email,
     password: this.state.password
   })
-  .then(response => { 
+  .then(response => {
     console.log(response)
     if (response.data.email) {
       this.props.history.push('/home');
