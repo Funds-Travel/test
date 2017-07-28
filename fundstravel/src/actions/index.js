@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // actions
-export const GET_PACKAGES = 'packages/GET_PACKAGES'
+export const GET_PACKAGES = 'packages/GET_PACKAGES';
+export const POST_USER = 'POST_USER';
 
 // action creators
 // action with promise
@@ -13,12 +14,10 @@ export function getPackages(){
   }
 }
 
-// Example simple action
-// export function addPackage(packet) {
-//   console.log("Adding")
-//
-//   return {
-//     type: ADD_PACKAGE,
-//     payload: packet
-//   }
-// }
+export function postUser(user) {
+  const request = axios.post('/api/traveler', user)
+  return {
+    type: POST_USER,
+    payload: request
+  }
+}

@@ -29,8 +29,10 @@ class Packages extends Component {
 }
 
 
-function mapStateToProps(state) {
-  return state
+function mapStateToProps({user, packet}) {
+  return {
+    packages: packet.packages
+  }
 }
 
 const mapDispatchToProps = {

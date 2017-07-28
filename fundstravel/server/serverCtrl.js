@@ -15,9 +15,11 @@ module.exports = {
     })
     // add catch
     .catch(err => {
+      console.log(err)
       res.status(500).json(err)
     })
     .then(user => {
+      console.log(user)
       // create the initil fund for the user,
       return db.createFund([user.id])
       .then(results => {
@@ -78,9 +80,9 @@ module.exports = {
 
     addFunds: function(req, res, next){
     const db = req.app.get('db')
-    
+
     const user_id = req.params.user_id;
-    
+
     console.log(req.body);
     db.insertFunds([user_id, req.body.balance, req.body.goal])
     .then(results => {
