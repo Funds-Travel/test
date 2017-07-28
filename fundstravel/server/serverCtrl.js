@@ -75,7 +75,8 @@ module.exports = {
       res.status(500).json(err)
     })
   },
-    postFunds: function(req, res, next){
+
+    addFunds: function(req, res, next){
     const db = req.app.get('db')
     
     const user_id = req.params.user_id;
