@@ -1,4 +1,4 @@
-/*.background-video{
+.background-video{
 height: 100%;
 width: 100%;
 float: left;
@@ -7,7 +7,7 @@ padding: none;
 position: fixed;
 
 
-}*/
+}
 
 
 .borderDiv {
@@ -15,14 +15,15 @@ position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0% 25% 25% 25%;
+  padding: 0% 25% 0% 25%;
   margin: 0;
   height: 100vh;
 
-  background-image: url("http://www.daoulaba.com/i/2017/05/blurred-city-lights-wallpaper-wide.jpg");
+
+  background-image: url("http://i.imgur.com/5OsqTua.gif");
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .input {
@@ -37,7 +38,7 @@ position: fixed;
   font-size: 2em;
   border: 2px solid black;
   border-radius: 4%;
-  opacity: .68;
+  opacity: .45;
 
   background-repeat: no-repeat;
   overflow: hidden;
@@ -48,7 +49,7 @@ position: fixed;
   margin-bottom: 10%;
   padding: 10px;
   font-size: .6em;
-  opacity: .9;
+  opacity: .;
 }
 
 .header {
@@ -74,8 +75,9 @@ position: fixed;
 }
 
 .submitButton {
+  color: white;
   font-size:  .6em;
-  background-color: #34fd02;
+  background-color: #241C32;
   opacity: 1;
   padding-bottom: 1%;
 

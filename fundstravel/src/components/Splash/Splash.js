@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Splash.css'
 
 
+
 class Splash extends Component {
 constructor() {
   super()
@@ -40,9 +41,12 @@ handleClick() {
     return (
       <div className="background">
 
+
+
+
         <div className="login">
           <button onClick={this.handleClick}
-                className="login">Login</button>
+                className="loginButton">Login</button>
           <input value={this.state.password}
                 onChange={this.changePassword}
                 className="" placeholder="Password"></input>

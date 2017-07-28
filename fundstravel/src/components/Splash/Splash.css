@@ -1,6 +1,12 @@
+
+@import url('https://fonts.google.com/specimen/Cabin');
+
 body {
+font-family: 'Cabin';
 
 }
+
+
 
 .logo {
   position: center;
@@ -9,7 +15,7 @@ body {
 }
 
 .background {
-  background-image: url('https://www.imagexplorer.com/wp-content/uploads/2016/11/Travelers-Map.jpg');
+  background-image: url('http://wallpaperbackgrounds.com/Content/wallpapers/earth/coastline/102017-24639.jpg');
   /*padding: 8% 15% 14% 15%;*/
   width: 100vw;
   height: 100vh;
@@ -24,6 +30,7 @@ body {
   font-size: 1.4em;
   line-height: 200%;
   padding: 10%;
+  font-family: 'Cabin';
 
 }
 
@@ -34,17 +41,25 @@ body {
   /*float: right;*/
   margin-top: 2%;
   float: right;
+
 }
 
 input {
-  margin-top: 2%;
+  margin-top: 1%;
   float: right;
   margin-right: 2px;
+  opacity: .6;
+  padding: 1%;
 
 }
 
 
 .loginButton {
+  opacity: .4;
+  float: right;
+  margin-top: 2%;
+
+
 
 }
 
