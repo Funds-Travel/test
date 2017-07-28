@@ -1,16 +1,10 @@
-import {GET_PACKAGES} from '../actions/index.js'
+import { combineReducers } from 'redux';
+import PostUserReducer from './reducer_postUser';
+import GetPackages from './reducer_getPackages';
 
-const initial = { packages: [], fetchingPackages: false, error: null };
+const rootReducer = combineReducers({
+  user: PostUserReducer,
+  packet: GetPackages
+});
 
-export default function rootReducer(state = initial, action) {
-  switch (action.type) {
-    case GET_PACKAGES + '_PENDING':
-      return {...state, fetchingPackages: true}
-    case GET_PACKAGES + '_FULFILLED':
-      return { ...state, fetchingPackages: false, packages: action.payload.data }
-    case GET_PACKAGES + '_REJECTED':
-      return { ...state, fetchingPackages: false, error: action.payload }
-    default:
-      return state
-  }
-}
+export default rootReducer;
