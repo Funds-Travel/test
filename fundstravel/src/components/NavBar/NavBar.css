@@ -1,5 +1,8 @@
 .navBar {
   width: 20vw;
-  height: 100vh;
+  height: 82vh;
   border: 2px solid black;
+  padding: 5%;
+  background-color: #e3e0e0;
+
 }
