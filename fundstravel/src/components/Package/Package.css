@@ -1,3 +1,5 @@
+/*doesnt link to site*/
+
 .allPackagesDiv {
 height: 100vh;
 
@@ -7,14 +9,14 @@ height: 100vh;
 
 
 .eachPackageDiv {
-  display: inline-block;
-  float: left;
+  display: ;
+  float: right;
   margin: 1.5%;
-  width: 20vw;
+  width: 25vw;
   height: 40vh;
 
-  border: 2px solid black;
-  background-color: white;
+  /*border: 2px solid black;*/
+  background-color: black;
   opacity: .9;
 
 
@@ -25,7 +27,8 @@ ul {
 }
 
 li {
-  padding: 2%;
+  padding: 1.5%;
+  padding-right: 15%;
 
   text-align: center;
 }

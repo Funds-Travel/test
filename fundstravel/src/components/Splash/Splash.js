@@ -37,11 +37,13 @@ handleClick() {
     console.log(error)
   })
 }
+
+
   render() {
     return (
       <div className="background">
 
-
+<section className="view1">
 
 
         <div className="login">
@@ -57,26 +59,37 @@ handleClick() {
 
 
 
-        <div className="about">
 
           <div className="logo">
-            Splash Page
-
-
-
-
-
+            <h1> Trip Funds </h1>
           </div>
 
+            <h2> Some savy text here? </h2>
 
-        Lorem ipsum dolor sit amet, ne nusquam accumsan gloriatur pri. No eam libris bonorum oporteat. Vis fabulas lucilius maiestatis id, ea est case consequuntur. Vel paulo nonumy vidisse ut.
+          
 
-Vivendo probatus no nam, at per tale dissentiet definitionem. Cum alia persius no, ex cum odio quaeque definitiones. Id nulla mundi ancillae pro, et duo agam oratio erroribus. Vocibus contentiones concludaturque sea cu.
 
-Aperiam recusabo postulant id qui, idque adipisci ea nec. Est ea dicit disputationi, no officiis vivendum qui. Ex iuvaret suscipiantur mediocritatem quo, te fabulas intellegam eam, no diceret urbanitas interpretaris his. Est cu malis soluta, ex pro postea viderer platonem, nullam scripta duo ad. Ad dico quidam minimum mei, ea usu purto imperdiet, cu delicata principes.
+</section>
 
-        </div>
 
+
+
+
+<section>
+
+<div className="view2">
+<h1>See the trips you can take with the savings you have!!</h1>
+
+</div>
+</section>
+
+<section>
+
+<div className="view3">
+<h1>Automatically populate the trips you can afford!!</h1>
+
+</div>
+</section>
 
 
 

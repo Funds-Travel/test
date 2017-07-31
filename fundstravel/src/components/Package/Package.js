@@ -3,7 +3,11 @@ import './Package.css';
 
 export default function Package({item}) {
   return (
+
+
+
     <div className="eachPackageDiv" key={item.id}>
+        <div className="cityCountry"> City/Country </div>
  <img className ="" src={item.hotel_image} alt={item.hotel_name}/>
       <ul>
       <li >
@@ -15,5 +19,7 @@ export default function Package({item}) {
       </li>
       </ul>
     </div>
+
+
   )
 }
