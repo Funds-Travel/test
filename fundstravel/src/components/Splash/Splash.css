@@ -1,47 +1,89 @@
 
 @import url('https://fonts.google.com/specimen/Cabin');
 
+
 body {
 font-family: 'Cabin';
-
 }
 
+
+.background {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  text-align: middle;
+  color: white;
+}
+
+section {
+ width: 100%;
+ display: table;
+ margin: 0;
+ max-width: none;
+
+ height: 100vh;
+}
+
+
+.view1 {
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle;
+  background-image: url('https://images.pexels.com/photos/59519/pexels-photo-59519.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.view2 {
+
+  display: table-cell;
+  vertical-align: middle;
+    background-image: url('http://wallpapercave.com/wp/c8MSprE.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+
+.view3 {
+  display: table-cell;
+  vertical-align: middle;
+  background-image: url('http://i.imgur.com/4rQJMS4.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
 
 
 .logo {
   position: center;
   font-size: 3em;
-  padding-bottom: 8%;
+  padding-top: 5%;
+  padding-bottom: 4%;
+  color: ;
 }
 
-.background {
-  background-image: url('http://allswalls.com/images/amazing-sunset-wallpaper-6.jpg');
-  /*padding: 8% 15% 14% 15%;*/
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  color: white;
-
-
-}
 
 .about {
 
   font-size: 1.4em;
   line-height: 200%;
-  padding: 10%;
+  /*padding: 10%;*/
   font-family: 'Cabin';
-
 }
 
 
 
 .login {
-  padding-right: 10px;
-  /*float: right;*/
-  margin-top: 2%;
+  padding-right: 3%;
   float: right;
-
+  margin-top: %;
+    float: right;
 }
 
 input {
@@ -50,7 +92,6 @@ input {
   margin-right: 2px;
   opacity: .6;
   padding: 1%;
-
 }
 
 
@@ -58,14 +99,10 @@ input {
   opacity: .4;
   float: right;
   margin-bottom: 1%;
-
-
-
 }
 
 
 
 .joinButton {
    font-size: 1.5em;
-
 }

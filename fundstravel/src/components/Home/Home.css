@@ -1,15 +1,18 @@
 .homeDiv {
   display: flex;
+
+
 }
 
 .homePackageDiv {
-height: 70vh;
+height: 72vh;
 padding: 8%;
 padding-right: 4%;
 overflow: auto;
 background-image: url('https://userscontent2.emaze.com/images/eaefdf06-a61e-4626-b6bc-3043ae944207/e4a743f167bf29dc46f0f1912a98b4cf.jpg');
 background-repeat: no-repeat;
 background-size: cover;
+
 
 
 }

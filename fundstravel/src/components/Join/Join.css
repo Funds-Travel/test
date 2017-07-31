@@ -15,22 +15,23 @@ position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0% 28% 0% 28%;
+  padding: 0% 35% 0% 35%;
   margin: 0;
-  height: 100vh;
-
-
-  background-image: url("http://i.imgur.com/5OsqTua.gif");
+  height: 98vh;
+  width: 30%;
+  /*background-image: url("http://i.imgur.com/5OsqTua.gif");*/
+  background-image: url('https://1.bp.blogspot.com/-LktjKNzno4A/WJSWaAH1RHI/AAAAAAAARLI/7du9Wv17XfQERsyBGzr6q4nA4kylhZ8GwCLcB/s1600/viaggiatori-zaino.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+
 }
 
 .input {
 
   background-color: black;
   margin: 0;
-  padding: 8%;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +39,8 @@ position: fixed;
   font-size: 2em;
   border: 2px solid black;
   border-radius: 4%;
-  opacity: .45;
+  color: black;
+  opacity: .30;
 
   background-repeat: no-repeat;
   overflow: hidden;
@@ -49,7 +51,8 @@ position: fixed;
   margin-bottom: 10%;
   padding: 10px;
   font-size: .6em;
-  opacity: .;
+  opacity: .9;
+  color: black;
 }
 
 .header {
