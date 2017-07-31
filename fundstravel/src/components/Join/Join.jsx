@@ -1,47 +1,42 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
-import { postUser } from '../../actions/index';
 
 
+import './Join.css';
 
-import './Join.css'
-
-class Join extends Component {
-  constructor(){
-  	super();
-
-  	this.state = {
+export default class Join extends Component {
+  constructor() {
+    super();
+    this.state = {
       email: '',
       password: '',
       confirm: ''
     }
-
-    this.handleEmail = this.handleEmail.bind(this);
-    this.handlePassword = this.handlePassword.bind(this);
-    this.handleConfirm = this.handleConfirm.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleEmail(event) {
+    //this needs to be in the store...
+      this.handleEmail = this.handleEmail.bind(this);
+      this.handlePassword = this.handlePassword.bind(this);
+      this.handleConfirm = this.handleConfirm.bind(this);
+      this.handleClick = this.handleClick.bind(this);
+    }
+    //this needs to be in the store...
+    handleEmail(event) {
     this.setState({ email: event.target.value })
   }
-
+//this needs to be in the store...
   handlePassword(event) {
     this.setState({ password: event.target.value })
   }
-
+//this needs to be in the store...
   handleConfirm(event) {
     this.setState({ confirm: event.target.value })
   }
-
+//this needs to be in the store...
   handleClick(event){
     event.preventDefault();
     // Something needs to happen with the input
     this.props.postUser(this.state)
   }
-
+//this needs to be in the store...
   componentWillReceiveProps(nextProps) {
     console.log(nextProps)
     if (nextProps.user) {
@@ -50,7 +45,6 @@ class Join extends Component {
       alert("Error. Please try again")
     }
   }
-
   render() {
     return (
       <div className="borderDiv">
@@ -81,12 +75,3 @@ class Join extends Component {
     )
   }
 }
-
-function mapStateToProps({user}) {
-  return user
-}
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ postUser },dispatch)
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Join))

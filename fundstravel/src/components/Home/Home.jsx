@@ -6,13 +6,12 @@ import Packages from '../../containers/Packages/Packages';
 import NavBar from '../NavBar/NavBar'
 
 
-export default class Home extends Component {
+class Home extends Component {
 
   render() {
     return (
         <div className='homeDiv'>
           <NavBar />
-
           <div className='homePackageDiv'>
             <Packages />
           </div>
@@ -20,3 +19,5 @@ export default class Home extends Component {
     )
   }
 }
+
+export default Home;

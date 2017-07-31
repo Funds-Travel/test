@@ -4,5 +4,4 @@ import reducers from '../reducers/index';
 
 const store = createStore(reducers, {}, applyMiddleware(promise()))
 
-
 export default store

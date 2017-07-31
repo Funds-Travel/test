@@ -6,12 +6,13 @@ import Package from '../../components/Package/Package';
 import './Packages.css';
 
 class Packages extends Component {
-    componentDidMount() {
+    componentWillMount() {
       this.props.getPackages()
     }
     componentWillReceiveProps(nextProps) {
-      console.log(this.props)
-      console.log(nextProps)
+
+      // console.log(this.props)
+      // console.log(nextProps)
     }
     render() {
         const myPackages = this.props.packages.map(item => {
@@ -31,7 +32,7 @@ class Packages extends Component {
 
 function mapStateToProps({user, packet}) {
   return {
-    packages: packet.packages
+    packages: packet.packages,
   }
 }
 

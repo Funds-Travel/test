@@ -67,10 +67,13 @@ module.exports = {
   getPackage: function(req, res, next){
     const db = req.app.get('db')
     //const {price, name, location, description, img, rating, travelers} = req.body;
-
+    console.log("serverCtrl req Session ",req.session)
     db.getPackage()
     .then(results => {
       // console.log(results);
+      // console.log(req.user)
+      // theUser = { user: req.user}
+      // results.push(theUser)
       res.status(200).json(results)
     })
     .catch(err => {

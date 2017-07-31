@@ -1,13 +1,12 @@
 import React from 'react';
-import './Package.css';
+import './Package.css'
 
+
+//need to make sure item is the correct reference...
 export default function Package({item}) {
   return (
-
-
-
     <div className="eachPackageDiv" key={item.id}>
-        <div className="cityCountry"> City/Country </div>
+      <div className="cityCountry"> City/Country </div>
  <img className ="" src={item.hotel_image} alt={item.hotel_name}/>
       <ul>
       <li >
@@ -19,7 +18,5 @@ export default function Package({item}) {
       </li>
       </ul>
     </div>
-
-
   )
 }
