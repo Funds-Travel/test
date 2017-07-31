@@ -2,30 +2,35 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { firebaseApp } from '../../firebase';
-import firebase from 'firebase';
+
 
 import './NavBar.css';
 
 
 class NavBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: ''
+    }
+  }
   signOut() {
 firebaseApp.auth().signOut();
 }
-  render() {
-    let theUser;
-    const userObj = firebase.auth().currentUser;
-if (userObj != null) {
-  userObj.providerData.forEach(function (profile) {
-    console.log("Email: "+profile.email)
-    theUser = profile.email
-  })
+componentWillMount() {
+  let theUser;
+    for (let key in localStorage) {
+      if (key.includes("firebase:authUser")) {
+        theUser = JSON.parse(localStorage.getItem(key)).email
+      }
+    }
+    this.setState({email: theUser})
 }
-
-    console.log(theUser)
+  render() {
     return (
       <div className="navBar">
         <h2>This is my NavBar, there are many like it but this one is mine</h2>
-        <h3> {theUser}</h3>
+        <h3> {this.state.email}</h3>
         <button
           className="btn btn-danger"
           onClick={() => this.signOut()}
