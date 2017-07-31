@@ -14,7 +14,7 @@ export default function Package({item}) {
       </li>
       <li className="price">
        Total Price of ${item.total_price} for {item.travelers} traveler(s)
-       <br /><br />
+       <br /><br /><br />
       </li>
       </ul>
     </div>
