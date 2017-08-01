@@ -45,11 +45,19 @@ componentWillMount() {
     return (
       <div className="navBar">
         <h2>This is my NavBar, there are many like it but this one is mine</h2>
-        <h3> {this.state.email}</h3>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h6> {this.state.email}</h6>
         <h3>Balance: {this.state.balance}</h3>
         <h3>Goal: {this.state.goal}</h3>
+
         <button
-          className="btn btn-danger"
+          className=" btn-large waves-effect waves-light red"
           onClick={() => this.signOut()}
         >
           Sign out

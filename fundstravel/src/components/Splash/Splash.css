@@ -1,9 +1,8 @@
-
-@import url('https://fonts.google.com/specimen/Cabin');
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 
 
 body {
-font-family: 'Cabin';
+font-family: 'Josefin';
 }
 
 
@@ -33,28 +32,41 @@ section {
   width: 100vw;
   display: table-cell;
   vertical-align: top;
-  padding-top: 4%;
+
+  padding-top: 1%;
   background-image: url('https://images.pexels.com/photos/59519/pexels-photo-59519.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+
+  -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: black;
+
 }
 
 
 
 .view2 {
 
+  width: 100vw;
+  text-align: right;
   display: table-cell;
-  vertical-align: middle;
-    background-image: url('http://wallpapercave.com/wp/c8MSprE.jpg');
+  vertical-align: top;
+  background-image: url('http://wallpapercave.com/wp/c8MSprE.jpg');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-left: 38% !important;
+  text-emphasis-position: right;
 }
 
 
 
 .view3 {
+  width: 100vw;
   display: table-cell;
   vertical-align: middle;
   background-image: url('http://i.imgur.com/4rQJMS4.gif');
@@ -71,10 +83,9 @@ section {
 }
 
 .logo {
-  position:  inherit;
-  font-size: 3em;
+  position:  center !important;
   padding: 5%;
-
+  font-size: 3em !important;
 }
 
 
@@ -89,6 +100,7 @@ section {
 
 
 .login {
+  width: 15%;
   padding-right: 3%;
   float: right;
   margin-top: 0;
@@ -96,22 +108,26 @@ section {
 }
 
 input {
-  margin-top: 1%;
+  color: black;
   float: right;
   margin-right: 6px;
-  opacity: .6;
-  padding: 1%;
+  opacity: .9;
+
 }
 
 
 .loginButton {
-
   float: inherit;
   margin-bottom: 1%;
+  background-color: gray !important;
 }
 
 
 
 .joinButton {
    font-size: 1.5em;
+}
+
+h1 {
+  font-size: 6.2rem !important;
 }

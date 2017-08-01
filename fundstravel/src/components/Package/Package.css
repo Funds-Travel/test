@@ -1,8 +1,8 @@
 /*doesnt link to site*/
 
 .allPackagesDiv {
-height: 100vh;
-
+height: 100vh !important;
+overflow: visible;
 
 }
 
@@ -11,9 +11,8 @@ height: 100vh;
 .eachPackageDiv {
   display: ;
   float: right;
-  margin: 1.8%;
   width: 25vw;
-  height: 50vh;
+  height: 45vh;
 
   /*border: 2px solid black;*/
   background-color: black;
@@ -24,7 +23,7 @@ height: 100vh;
 
 .cityCountry {
   font-size: 1.6em;
-  background-color: transparent;
+
 
 }
 
@@ -35,7 +34,7 @@ ul {
 
 li {
   padding: 1.5%;
-  padding-right: 15%;
+
   text-align: center;
 }
 
