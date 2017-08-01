@@ -1,2 +1,2 @@
-insert into user_table (email, password) values ($1, $2)
+insert into funds (email) values ($1)
 returning *;
