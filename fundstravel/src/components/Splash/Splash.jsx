@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+
+
+// import axios from 'axios';
+
 
 import { firebaseApp } from '../../firebase';
 
+// import Join from "../Join/Join";
 import './Splash.css';
 
 
@@ -14,40 +18,7 @@ class Splash extends Component {
       email: '',
       password: ''
     }
-    //needs to be exported to store.../run through firebase
-    //see inputs & button below
-//     this.changeUserName = this.changeUserName.bind(this)
-//     this.changePassword = this.changePassword.bind(this)
-//     this.handleClick = this.handleClick.bind(this)
 }
-//     //needs to be exported to store.../run through firebase
-//     //see input below
-// changeUserName(e) {
-//   this.setState({email: e.target.value})
-// }
-//     //needs to be exported to store.../run through firebase
-//     // see input below
-// changePassword(e) {
-//     this.setState({password: e.target.value})
-// }
-//     //needs to be exported to store.../run through firebase
-//     // see button below
-// handleClick() {
-//   axios.post('/welcome', {
-//     email: this.state.email,
-//     password: this.state.password
-//   })
-//   .then(response => {
-//     console.log(response)
-//     if (response.data.email) {
-//       this.props.history.push('/home');
-//     }
-//   })
-//   .catch(function(error) {
-//     console.log(error)
-//   })
-// }
-
 
 signIn() {
     console.log('signIn()---this.state', this.state.email)
@@ -57,8 +28,6 @@ signIn() {
         this.setState({error})
       })
   }
-// the buttons and inputs need to be fixed to run
-// through firebase/store
   render() {
     return (
       <div className="background">
@@ -71,11 +40,13 @@ signIn() {
           <input value={this.state.email}
                 onChange={event => this.setState({email: event.target.value})}
                 className="" placeholder="Username"></input>
+
                 <input value={this.state.password}
                       onChange={event => this.setState({password: event.target.value})}
                       className="" placeholder="Password"></input>
                 <button onClick={() => this.signIn()}
                       className="loginButton">Login</button>
+
         </div>
 
        <div className="logo">
@@ -111,13 +82,13 @@ Phasellus nisi nisl, tempor feugiat urna a, iaculis placerat turpis. Ut maximus 
 
      </div>
 
+
    )
   }
 }
 
 function mapStateToProps(state) {
-  // console.log('Splash state', state);
-  return {}
+  return state
 }
 
 export default connect(mapStateToProps, null)(Splash)
