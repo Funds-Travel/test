@@ -17,7 +17,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
     browserHistory.push('/welcome');
   } else {
     // console.log('user has signed out or still needs to sign in.');
-    browserHistory.replace('/join');
+    browserHistory.replace('/splash');
   }
 })
 

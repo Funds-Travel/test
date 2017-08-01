@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import axios from 'axios';
 
 import { firebaseApp } from '../../firebase';
 
+import Join from "../Join/Join";
 import './Splash.css';
 
 
@@ -15,7 +15,6 @@ class Splash extends Component {
       password: ''
     }
 }
-
 
 signIn() {
     console.log('singIn()---this.state', this.state.email)
@@ -40,6 +39,7 @@ signIn() {
           <input value={this.state.email}
                 onChange={event => this.setState({email: event.target.value})}
                 className="" placeholder="Username"></input>
+            <a href="#signUp">Or create an account</a>
         </div>
 
         <div className="logo">
@@ -65,7 +65,8 @@ signIn() {
 
 </div>
 </section>
-
+<a name="signUp">
+<Join /></a>
       </div>
 
     )
