@@ -25,9 +25,17 @@ if (userObj != null) {
     return (
       <div className="navBar">
         <h2>This is my NavBar, there are many like it but this one is mine</h2>
-        <h3> {theUser}</h3>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h5> {theUser}</h5>
+        <br />
+
         <button
-          className="btn btn-danger"
+          className=" btn-large waves-effect waves-light red"
           onClick={() => this.signOut()}
         >
           Sign out
