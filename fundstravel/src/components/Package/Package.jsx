@@ -6,14 +6,17 @@ import './Package.css'
 export default function Package({item}) {
   return (
     <div className="eachPackageDiv" key={item.id}>
-      <div className="cityCountry"> City/Country </div>
+
  <img className ="" src={item.hotel_image} alt={item.hotel_name}/>
       <ul>
+        <li>
+          <div className="cityCountry"> {item.city_country} </div>
+        </li>
       <li >
         {item.hotel_name}<br />
       </li>
       <li className="price">
-       Total Price of ${item.total_price} for {item.travelers} traveler(s)
+       Total Price of ${item.total_price} <br /> {item.travelers} travelers
        <br /><br /><br />
       </li>
       </ul>

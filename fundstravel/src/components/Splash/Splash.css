@@ -11,7 +11,7 @@ font-family: 'Cabin';
   display: table-cell;
   vertical-align: middle;
   width: 100vw;
-  height: 100vh;
+  /*height: 100vh;*/
   background-size: cover;
   overflow: hidden;
   text-align: middle;
@@ -29,14 +29,18 @@ section {
 
 
 .view1 {
+
   width: 100vw;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
+  padding-top: 4%;
   background-image: url('https://images.pexels.com/photos/59519/pexels-photo-59519.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
+
+
 
 .view2 {
 
@@ -60,12 +64,17 @@ section {
 }
 
 
+.logoBox {
+  padding: 33%;
+  height: 50px;
+  width: 50px;
+}
+
 .logo {
-  position: center;
+  position:  inherit;
   font-size: 3em;
-  padding-top: 5%;
-  padding-bottom: 4%;
-  color: ;
+  padding: 5%;
+
 }
 
 
@@ -82,22 +91,22 @@ section {
 .login {
   padding-right: 3%;
   float: right;
-  margin-top: %;
-    float: right;
+  margin-top: 0;
+    float: top;
 }
 
 input {
   margin-top: 1%;
   float: right;
-  margin-right: 2px;
+  margin-right: 6px;
   opacity: .6;
   padding: 1%;
 }
 
 
 .loginButton {
-  opacity: .4;
-  float: right;
+
+  float: inherit;
   margin-bottom: 1%;
 }
 

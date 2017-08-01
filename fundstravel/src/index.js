@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// import { Provider } from 'react-redux';
+// import { BrowserRouter } from 'react-router-dom';
+
 import { browserHistory} from 'react-router';
 import store from './store/index'
 
