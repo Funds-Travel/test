@@ -1,2 +1,2 @@
-insert into funds (email) values ($1)
+insert into funds (user_email) values ($1)
 returning *;
