@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { firebaseApp } from '../../firebase';
 
-import Join from "../Join/Join";
+// import Join from "../Join/Join";
 import './Splash.css';
 
 
@@ -49,7 +49,7 @@ signIn() {
        <button onClick={() => this.signIn()}
                 className="loginButton">Login</button>
 
-            <a href="#signUp">Or create an account</a>
+
 
         </div>
 
@@ -79,8 +79,8 @@ signIn() {
 
 </div>
 </section>
-<a name="signUp">
-<Join /></a>
+
+
       </div>
 
     )

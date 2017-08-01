@@ -4,9 +4,9 @@ module.exports = {
     const db = req.app.get('db');
     // const {email, password} = req.body
     const email = req.body.email
-    const password = req.body.password
+    // const password = req.body.password
     // create the traveler as an array
-    db.createTraveler([email, password])
+    db.createTraveler([email])
     .then(results => {
       console.log(results)
       // get the first index from the array

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { postUser } from '../../actions/index';
@@ -44,7 +44,7 @@ class Join extends Component {
   componentWillReceiveProps(nextProps) {
     console.log(nextProps);
     if (nextProps.user) {
-      this.props.history.push('/home');
+      this.props.history.push('/welcome');
     } else if (nextProps.error) {
       alert('Error. Please try again');
     }
