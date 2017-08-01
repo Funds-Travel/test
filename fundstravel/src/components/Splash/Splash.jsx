@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 // import axios from 'axios';
 
 import { firebaseApp } from '../../firebase';
 
+import Join from "../Join/Join";
 import './Splash.css';
 
 
@@ -14,40 +16,7 @@ class Splash extends Component {
       email: '',
       password: ''
     }
-    //needs to be exported to store.../run through firebase
-    //see inputs & button below
-//     this.changeUserName = this.changeUserName.bind(this)
-//     this.changePassword = this.changePassword.bind(this)
-//     this.handleClick = this.handleClick.bind(this)
 }
-//     //needs to be exported to store.../run through firebase
-//     //see input below
-// changeUserName(e) {
-//   this.setState({email: e.target.value})
-// }
-//     //needs to be exported to store.../run through firebase
-//     // see input below
-// changePassword(e) {
-//     this.setState({password: e.target.value})
-// }
-//     //needs to be exported to store.../run through firebase
-//     // see button below
-// handleClick() {
-//   axios.post('/welcome', {
-//     email: this.state.email,
-//     password: this.state.password
-//   })
-//   .then(response => {
-//     console.log(response)
-//     if (response.data.email) {
-//       this.props.history.push('/home');
-//     }
-//   })
-//   .catch(function(error) {
-//     console.log(error)
-//   })
-// }
-
 
 signIn() {
     console.log('singIn()---this.state', this.state.email)
@@ -57,8 +26,6 @@ signIn() {
         this.setState({error})
       })
   }
-// the buttons and inputs need to be fixed to run
-// through firebase/store
   render() {
     return (
 
@@ -78,8 +45,12 @@ signIn() {
                 className="" placeholder="Username"></input>
 
 
+
        <button onClick={() => this.signIn()}
                 className="loginButton">Login</button>
+
+            <a href="#signUp">Or create an account</a>
+
         </div>
 
 
@@ -108,7 +79,8 @@ signIn() {
 
 </div>
 </section>
-
+<a name="signUp">
+<Join /></a>
       </div>
 
     )
@@ -116,8 +88,7 @@ signIn() {
 }
 
 function mapStateToProps(state) {
-  // console.log('Splash state', state);
-  return {}
+  return state
 }
 
 export default connect(mapStateToProps, null)(Splash)

@@ -4,6 +4,7 @@ import axios from 'axios';
 export const GET_PACKAGES = 'packages/GET_PACKAGES';
 export const POST_USER = 'POST_USER';
 export const SIGNED_IN = 'SIGNED_IN';
+// export const GET_USER = 'GET_USER';
 
 // action creators
 // action with promise
@@ -29,3 +30,11 @@ export function logUser(email) {
   }
   return action
 }
+//
+// export function getUser(user){
+//   const request = axios.get('/api/user/:email')
+//   return {
+//     type: GET_USER,
+//     payload: request
+//   }
+// }
