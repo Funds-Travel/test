@@ -104,18 +104,6 @@ componentDidMount() {
 
         placeholder={this.state.goal}
         onChange={this.handleNewGoal}/>
-        <p>
-
-
-
-
-
-
-
-
-
-
-      </p>
 
         </Row>
 
