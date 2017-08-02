@@ -20,7 +20,10 @@ class Splash extends Component {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      error: {
+        message: ''
+      }
     };
 
     this.handleEmail = this.handleEmail.bind(this);
