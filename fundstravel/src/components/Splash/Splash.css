@@ -145,16 +145,10 @@ h1 {
  z-index:100;
  left:50%;
  top:100em;
-
-
  width:9em;
  height:9em;
-
  border-radius:50%;
  font-size:0.5em;
  display:block;
-
-
-    -webkit-animation-delay: 3s;
-
+ -webkit-animation-delay: 3s;
 }
