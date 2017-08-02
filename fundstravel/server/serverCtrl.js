@@ -86,8 +86,11 @@ module.exports = {
 
     const user_id = req.params.user_id;
 
-    console.log(req.body);
-    db.insertFunds([user_id, req.body.balance, req.body.goal])
+    // console.log(req.body);
+    if (req.body.newGoal.length === 0) {
+      req.body.newGoal =  req.body.goal;
+    }
+    db.insertFunds([user_id, req.body.newBalance, req.body.newGoal])
     .then(results => {
       res.status(200).json(results)
     })
