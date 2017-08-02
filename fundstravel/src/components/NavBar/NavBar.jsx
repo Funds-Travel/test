@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button, Modal, Row, Input } from 'react-materialize';
 
 // import { getUser } from '../../actions/index';
 
@@ -10,17 +11,42 @@ import './NavBar.css';
 
 
 class NavBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: '',
       balance: '',
-      goal: ''
+      goal: '',
+      newBalance: '',
+      newGoal: ''
     }
+    this.addFunds = this.addFunds.bind(this);
+    this.handleNewGoal = this.handleNewGoal.bind(this);
   }
   signOut() {
 firebaseApp.auth().signOut();
 }
+
+handleNewBalance(event) {
+  this.setState({ newBalance: event.target.value });
+}
+handleNewGoal(event) {
+    this.setState({ newGoal: event.target.value });
+}
+
+addFunds(event) {
+  const { email, newBalance, newGoal, goal } = this.state;
+  axios.post('/api/addFunds/' + email, {email, newBalance, newGoal, goal})
+  axios.get('/api/user/' + email)
+    .then(response => {
+      this.setState({
+        balance: response.data[0].balance,
+        goal: response.data[0].goal
+      })
+    })
+  }
+
+
 componentWillMount() {
   let theUser;
     for (let key in localStorage) {
@@ -40,11 +66,59 @@ componentWillMount() {
       console.log('error' + error)
     })
 }
-  render() {
 
+componentDidMount() {
+  Modal.defaultProps = {
+    actions: [<Button
+    modal="close"
+    className="submitButton"
+    onClick={event => this.addFunds(event)}
+    >
+    {' '}Submit{' '}
+  </Button>]
+  }
+}
+
+  render() {
     return (
       <div className="navBar">
-        <h2>This is my NavBar, there are many like it but this one is mine</h2>
+        <h6>This is my NavBar, there are many like it but this one is mine</h6>
+
+
+        <Modal
+        header='Add Funds'
+        trigger={
+          <Button waves='light'>Add Funds</Button>
+        }>
+
+        <Row>
+
+
+        <Input type="s" label="Add Funds" s={12}
+        value={this.state.newBalance}
+        onChange={event => this.setState({newBalance: event.target.value})}/>
+        <Input type="s" label="Set New Goal" s={12}
+
+        placeholder={this.state.goal}
+        onChange={this.handleNewGoal}/>
+        <p>
+
+
+
+
+
+
+
+
+
+
+      </p>
+
+        </Row>
+
+
+        </Modal>
+
 
         <br />
         <br />
@@ -71,6 +145,7 @@ componentWillMount() {
 function mapStateToProps(state) {
   return state
 }
+
 
 
 export default connect(mapStateToProps, null)(NavBar)

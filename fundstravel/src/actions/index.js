@@ -4,6 +4,7 @@ import axios from 'axios';
 export const GET_PACKAGES = 'packages/GET_PACKAGES';
 export const POST_USER = 'POST_USER';
 export const SIGNED_IN = 'SIGNED_IN';
+export const ADD_FUNDS = 'ADD_FUNDS';
 // export const GET_USER = 'GET_USER';
 
 // action creators
@@ -29,6 +30,13 @@ export function logUser(email) {
     email
   }
   return action
+}
+export function addFunds(email) {
+  const request = axios.post('/api/addFunds/' + email)
+  return {
+    type: ADD_FUNDS,
+    payload: request
+  }
 }
 //
 // export function getUser(user){
