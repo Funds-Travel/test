@@ -31,6 +31,8 @@ class Splash extends Component {
     this.handleConfirm = this.handleConfirm.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.signUp = this.signUp.bind(this);
+    this.scrollToView2 = this.scroll.bind(this, ".view2")
+    this.scrollToView3 = this.scroll.bind(this, ".view3")
 
 }
 
@@ -62,7 +64,8 @@ signUp() {
     })
 }
 
-
+componentDidMount() {
+}
 componentWillReceiveProps(nextProps) {
   console.log(nextProps);
   if (nextProps.user) {
@@ -84,6 +87,12 @@ signIn() {
         this.setState({error})
       })
   }
+  scroll(element) {
+    var top = window.$(element).offset().top
+    window.$('body').animate({
+      scrollTop: top
+    }, 1000)
+  }
 
   render() {
     return (
@@ -96,22 +105,22 @@ signIn() {
         <div className="login">
 
 
-          <input value={this.state.password}
-                onChange={event => this.setState({password: event.target.value})}
-                className="" placeholder="Password"></input>
 
           <input value={this.state.email}
                 onChange={event => this.setState({email: event.target.value})}
                 className="" placeholder="Username"></input>
 
+                <input value={this.state.password}
+                  onChange={event => this.setState({password: event.target.value})}
+                  className="" placeholder="Password"></input>
 
        <button onClick={() => this.signIn()}
                 className="loginButton">Login</button>
-
+                <br />
                 <Modal
               	header='Create Account'
               	trigger={
-              		<Button waves='light'>Create an account</Button>
+              		<Button className='joinButton'>Sign Up</Button>
               	}>
 
                 <Row>
@@ -128,7 +137,7 @@ signIn() {
           value={this.state.email}
           onChange={this.handleEmail}/>
           <button
-            className="submitButton"
+            className=""
             onClick={event => this.handleClick(event)}
           >
             {' '}Submit{' '}
@@ -149,6 +158,7 @@ signIn() {
 
            <h2> Some savy text here? </h2>
          </div>
+         <button className="nextButton" onClick={this.scrollToView2}></button>
 </section>
 
 <section>
@@ -160,8 +170,12 @@ signIn() {
 Phasellus nisi nisl, tempor feugiat urna a, iaculis placerat turpis. Ut maximus euismod fermentum. Nam at felis maximus, cursus mauris quis, eleifend libero. Nam euismod, tellus vitae interdum consectetur, velit odio porttitor leo, ut sagittis nunc elit sed urna. Mauris suscipit, augue porta venenatis egestas, purus diam sagittis arcu, ac vestibulum ex augue et sapien. Nunc ac mauris ut tellus porttitor molestie id in est. Curabitur euismod facilisis leo id porta. Sed ac magna congue, lobortis purus ut, pretium eros. Sed congue, sem eget rhoncus luctus, quam arcu imperdiet massa, id bibendum orci odio sit amet orci.
 
 </h5>
-
+<div>
+  <button onClick={this.scrollToView3}>Next</button>
 </div>
+</div>
+
+
 </section>
 
 <section>

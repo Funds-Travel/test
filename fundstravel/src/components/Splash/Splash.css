@@ -61,6 +61,8 @@ section {
   padding-right: 5%;
   padding-left: 38% !important;
   text-emphasis-position: right;
+
+
 }
 
 
@@ -119,15 +121,40 @@ input {
 .loginButton {
   float: inherit;
   margin-bottom: 1%;
-  background-color: gray !important;
+  background-color: #c8bdbd !important;
+  color: black;
 }
 
 
 
 .joinButton {
-   font-size: 1.5em;
+  float: inherit;
+  margin-bottom: 1%;
+  background-color: #c8bdbd!important;
+  color: black
+
 }
 
 h1 {
   font-size: 6.2rem !important;
+}
+
+.nextButton {
+  background-image:url('https://cdn4.iconfinder.com/data/icons/essential-app-2/16/down-menu-arrow-botton-64.png') !important;
+  position:absolute;
+ z-index:100;
+ left:50%;
+ top:100em;
+
+
+ width:9em;
+ height:9em;
+
+ border-radius:50%;
+ font-size:0.5em;
+ display:block;
+
+
+    -webkit-animation-delay: 3s;
+
 }

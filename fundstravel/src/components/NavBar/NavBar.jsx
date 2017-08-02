@@ -82,6 +82,9 @@ componentDidMount() {
   render() {
     return (
       <div className="navBar">
+
+        <h3>Trip Funds</h3>
+
         <h6>This is my NavBar, there are many like it but this one is mine</h6>
 
 
@@ -120,16 +123,25 @@ componentDidMount() {
         </Modal>
 
 
+
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
-        <h6> {this.state.email}</h6>
+
         <h3>Balance: {this.state.balance}</h3>
         <h3>Goal: {this.state.goal}</h3>
 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <h5> {this.state.email}</h5>
         <button
           className=" btn-large waves-effect waves-light red"
           onClick={() => this.signOut()}
