@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './Home.css'
 
-import Packages from '../../containers/Packages/Packages';
+// import Packages from '../../containers/Packages/Packages';
 import NavBar from '../NavBar/NavBar'
 
 
@@ -13,7 +13,7 @@ class Home extends Component {
         <div className='homeDiv'>
           <NavBar />
           <div className='homePackageDiv'>
-            <Packages />
+
           </div>
         </div>
     )

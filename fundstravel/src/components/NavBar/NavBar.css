@@ -1,9 +1,23 @@
-.navBar {
+/*.navBar {
   position: absolute;
   width: 22vw;
   height: 100vh;
-  /*border: 2px solid black;*/
-  padding: 2%;
-  background-color: #e2e8f1;
 
+  padding: 2%;
+  background-color: #f4f4f4;
+
+}*/
+
+/*ECECEC  grey panel*/
+/*333 -> black */
+/*ccc -> panel gray */
+
+.signout_btn {
+  margin-top: 50px;
+}
+
+.meh{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }

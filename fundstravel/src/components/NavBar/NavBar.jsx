@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal, Row, Input } from 'react-materialize';
+import Packages from '../../containers/Packages/Packages';
 
 // import { getUser } from '../../actions/index';
 
@@ -24,8 +25,8 @@ class NavBar extends Component {
     this.addFunds = this.addFunds.bind(this);
     this.handleNewGoal = this.handleNewGoal.bind(this);
   }
-  signOut() {
-firebaseApp.auth().signOut();
+signOut() {
+  firebaseApp.auth().signOut();
 }
 
 handleNewBalance(event) {
@@ -88,71 +89,75 @@ componentDidMount() {
 
   render() {
     return (
-      <div className="navBar">
+      <div>
+        <div className="navbar-fixed">
+          <nav>
+            <div className="nav-wrapper">
+              <a href="#!" className="brand-logo center">Travel Funds</a>
+            </div>
+          </nav>
+        </div>
 
-        <h3>Trip Funds</h3>
+        <div className="container">
 
-        <h6>This is my NavBar, there are many like it but this one is mine</h6>
-
-
-        <Modal
-        header='Add Funds'
-        trigger={
-          <Button waves='light'>Add Funds</Button>
-        }>
-
-        <Row>
-
-
-        <Input type="s" label="Add Funds" s={12}
-        value={this.state.newBalance}
-        onChange={event => this.setState({newBalance: event.target.value})}/>
-        <Input type="s" label="Set New Goal" s={12}
-
-        placeholder={this.state.goal}
-        onChange={this.handleNewGoal}/>
-
-        </Row>
-
-
-        </Modal>
+        </div>
 
 
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div className="row">
+          <div className="col s12 m12 l3">
 
-        <h3>Balance: {this.state.balance}</h3>
-        <h3>Goal: {this.state.goal}</h3>
+            <div className="card-panel red lighten-3">
+              <span className="white-text"><h4>Welcome</h4></span>
+              <span className="white-text"><h5> {this.state.email}</h5></span>
+              <div className="signout_btn">
+                <button className=" btn-large waves-effect waves-light red"
+                        onClick={() => this.signOut()} >Sign out</button>
+              </div>
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+            </div>
 
-        <h5> {this.state.email}</h5>
-        <button
-          className=" btn-large waves-effect waves-light red"
-          onClick={() => this.signOut()}
-        >
-          Sign out
-      </button>
+
+              <div className="card-panel red lighten-3">
+                <span className="white-text">
+                  <h4>Balance: {this.state.balance}</h4>
+                  <h4>Goal: {this.state.goal}</h4>
+                  <Modal header='Add Funds' trigger={
+                    <Button waves='light'>Add Funds</Button>
+                  }>
+                    <Row>
+                      <Input type="s" label="Add Funds" s={12}
+                      value={this.state.newBalance}
+                      onChange={event => this.setState({newBalance: event.target.value})}/>
+                      <Input type="s" label="Set New Goal" s={12}
+
+                      placeholder={this.state.goal}
+                      onChange={this.handleNewGoal}/>
+                    </Row>
+                  </Modal>
+                </span>
+              </div>
+
+
+          </div>
+
+          <div className=" eachPackageDiv col s12 m12 l9">
+            <Packages />
+
+          </div>
+
+        </div>
 
       </div>
+
+
     )
   }
 }
 
+
 function mapStateToProps(state) {
   return state
 }
-
-
 
 export default connect(mapStateToProps, null)(NavBar)
