@@ -1,23 +1,28 @@
-/*.navBar {
-  position: absolute;
-  width: 22vw;
-  height: 100vh;
-
-  padding: 2%;
-  background-color: #f4f4f4;
-
-}*/
-
-/*ECECEC  grey panel*/
-/*333 -> black */
-/*ccc -> panel gray */
+.background {
+  background-image: url('');
+}
 
 .signout_btn {
   margin-top: 50px;
 }
 
-.meh{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+.navFix{
+position: fixed;
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 320px) {
+    .navFix {
+      position: static;
+    }
+    }
+
+
+.card {
+  height: 20%;
+}
+
+.fontStyle {
+  color: #3a6487 !important;
+
 }

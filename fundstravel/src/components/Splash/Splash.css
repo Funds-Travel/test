@@ -1,20 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url('https://fonts.googleapis.com/css?family=Nobile:700i');
 
 
 body {
-font-family: 'Josefin';
+  font-family: 'Nobile', sans-serif;
+
 }
 
 
 .background {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: rigfht;
   width: 100vw;
   /*height: 100vh;*/
   background-size: cover;
   overflow: hidden;
   text-align: middle;
-  color: white;
+  color: black;
 }
 
 section {
@@ -29,16 +30,16 @@ section {
 
 .view1 {
 
-  width: 100vw;
+  width: 100vw !important;
   display: table-cell;
   vertical-align: top;
 
   padding-top: 1%;
-  background-image: url('https://images.pexels.com/photos/59519/pexels-photo-59519.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+  background-image: url('https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508_1280.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-
+  color: black;
   -webkit-text-stroke-width: .5px;
    -webkit-text-stroke-color: black;
 
@@ -48,7 +49,7 @@ section {
 
 .view2 {
 
-  width: 100vw;
+  width: 100vw !important;
   text-align: right;
   display: table-cell;
   vertical-align: top;
@@ -68,10 +69,10 @@ section {
 
 
 .view3 {
-  width: 100vw;
+  width: 100vw !important;
   display: table-cell;
   vertical-align: middle;
-  background-image: url('http://i.imgur.com/4rQJMS4.gif');
+  background-image: url('https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508_1280.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -87,7 +88,7 @@ section {
 .logo {
   position:  center !important;
   padding: 5%;
-  font-size: 3em !important;
+  font-size: 3.5em !important;
 }
 
 
@@ -109,18 +110,18 @@ section {
     float: top;
 }
 
-input {
-  color: black;
-  float: right;
-  margin-right: 6px;
+.inputStyle {
+  color: black !important;
+
   opacity: .9;
 
 }
 
 
 .loginButton {
-  float: inherit;
-  margin-bottom: 1%;
+
+  float: inherit !important;
+  margin-bottom: 2% !important;
   background-color: #c8bdbd !important;
   color: black;
 }
@@ -128,15 +129,28 @@ input {
 
 
 .joinButton {
-  float: inherit;
-  margin-bottom: 1%;
+
+  float: inherit !important;
+  margin-bottom: 1% !important;
   background-color: #c8bdbd!important;
+  font-size: 1rem !important;
   color: black
 
 }
 
-h1 {
-  font-size: 6.2rem !important;
+.logoText {
+  padding-top: 10%;
+  padding-left: 5%;
+  font-size: 8.2rem !important;
+  color: #C5DCEF;
+  -webkit-text-stroke-width: 1.5px;
+   -webkit-text-stroke-color: black;
+}
+
+.about {
+  color: black;
+  -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: black;
 }
 
 .nextButton {
@@ -144,11 +158,29 @@ h1 {
   position:absolute;
  z-index:100;
  left:50%;
- top:100em;
+ top:103em;
  width:9em;
  height:9em;
  border-radius:50%;
  font-size:0.5em;
  display:block;
  -webkit-animation-delay: 3s;
+}
+
+.nextNextButton {
+  background-image:url('https://cdn4.iconfinder.com/data/icons/essential-app-2/16/down-menu-arrow-botton-64.png') !important;
+  position:absolute;
+ z-index:100;
+ left:50%;
+ top: 200em;
+ width:9em;
+ height:9em;
+ border-radius:50%;
+ font-size:0.5em;
+ display:block;
+ -webkit-animation-delay: 3s;
+}
+
+input::placeholder {
+  color: black;
 }

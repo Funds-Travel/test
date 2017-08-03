@@ -87,13 +87,14 @@ componentDidMount() {
   }
 }
 
+
   render() {
     return (
-      <div>
+      <div className="">
         <div className="navbar-fixed">
           <nav>
-            <div className="nav-wrapper">
-              <a href="#!" className="brand-logo center">Travel Funds</a>
+            <div className="nav-wrapper   blue lighten-3">
+              <a href="#!" className="brand-logo center   blue lighten-3">Travel Funds</a>
             </div>
           </nav>
         </div>
@@ -104,24 +105,25 @@ componentDidMount() {
 
 
 
-        <div className="row">
-          <div className="col s12 m12 l3">
+        <div className="row ">
+          <div className="col s12 m12 l3 navFix show-on-medium-and-up">
 
-            <div className="card-panel red lighten-3">
-              <span className="white-text"><h4>Welcome</h4></span>
-              <span className="white-text"><h5> {this.state.email}</h5></span>
+            <div className="card-panel small fixed  blue-grey lighten-4">
+              <span className="gray-text"><h4>Welcome</h4></span>
+              <span className="gray-text"><h5> {this.state.email}</h5></span>
               <div className="signout_btn">
-                <button className=" btn-large waves-effect waves-light red"
+                <button className="waves-effect waves-light btn red lighten-1"
                         onClick={() => this.signOut()} >Sign out</button>
               </div>
 
             </div>
 
 
-              <div className="card-panel red lighten-3">
-                <span className="white-text">
-                  <h4>Balance: {this.state.balance}</h4>
-                  <h4>Goal: {this.state.goal}</h4>
+              <div className="card-panel  blue-grey lighten-4">
+                <span className="gray-text">
+                  <h4>Balance: ${this.state.balance}</h4>
+                  <h4>Goal: ${this.state.goal}</h4>
+                  <br />
                   <Modal header='Add Funds' trigger={
                     <Button waves='light'>Add Funds</Button>
                   }>
@@ -141,7 +143,7 @@ componentDidMount() {
 
           </div>
 
-          <div className=" eachPackageDiv col s12 m12 l9">
+          <div className=" eachPackageDiv col s12 m12 l9 right">
             <Packages />
 
           </div>

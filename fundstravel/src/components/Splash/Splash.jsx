@@ -24,6 +24,7 @@ class Splash extends Component {
     this.handleConfirm = this.handleConfirm.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.signUp = this.signUp.bind(this);
+    this.scrollToView1 = this.scroll.bind(this, ".view1")
     this.scrollToView2 = this.scroll.bind(this, ".view2")
     this.scrollToView3 = this.scroll.bind(this, ".view3")
 
@@ -77,17 +78,18 @@ signIn() {
         <div className="login">
           <input value={this.state.email}
                 onChange={event => this.setState({email: event.target.value})}
-                className="" placeholder="Username"></input>
-                <input value={this.state.password}
+                className="inputStyle" placeholder="Username"></input>
+                <input className=""value={this.state.password}
                   type="password"
                   onChange={event => this.setState({password: event.target.value})}
-                  className="" placeholder="Password"></input>
+                   placeholder="Password"></input>
                   <button onClick={() => this.signIn()}
-                          className="loginButton">Login</button>
+                          className="waves-effect waves-light btn">Login</button>
+                <br />
                 <br />
                 <Modal header='Create Account'
               	       trigger={
-              		<Button className='joinButton'>Sign Up</Button>
+              		<Button className='waves-effect waves-light btn'>Join!</Button>
               	               }>
                   <Row>
                     <Input placeholder="Placeholder" s={6} label="First Name" />
@@ -110,26 +112,27 @@ signIn() {
         </div>
        <div className="logo">
          <br />
-            <h1> Trip Funds </h1>
-          <br />
-           <h2> Some savy text here? </h2>
+            <h1 className="logoText"> Trip Funds </h1>
+
          </div>
          <button className="nextButton" onClick={this.scrollToView2}></button>
        </section>
        <section>
          <div className="view2">
-           <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum lacus sit amet enim pulvinar lacinia. Etiam facilisis neque vehicula, elementum tellus rhoncus, sollicitudin mi. Donec facilisis urna vitae justo tempor, ut euismod enim sodales. Nunc vel ullamcorper orci, eget lobortis lectus. Suspendisse potenti. Integer blandit nisl eget nunc congue interdum. Aliquam imperdiet magna non justo ultrices, sit amet bibendum dui aliquam. Donec non eleifend orci. Nunc finibus risus pulvinar orci tristique, ac volutpat est cursus.
+           <h3 className="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum lacus sit amet enim pulvinar lacinia. Etiam facilisis neque vehicula, elementum tellus rhoncus, sollicitudin mi. Donec facilisis urna vitae justo tempor, ut euismod enim sodales. Nunc vel ullamcorper orci, eget lobortis lectus. Suspendisse potenti. Integer blandit nisl eget nunc congue interdum. Aliquam imperdiet magna non justo ultrices, sit amet bibendum dui aliquam. Donec non eleifend orci. Nunc finibus risus pulvinar orci tristique, ac volutpat est cursus.
 
-             Phasellus nisi nisl, tempor feugiat urna a, iaculis placerat turpis. Ut maximus euismod fermentum. Nam at felis maximus, cursus mauris quis, eleifend libero. Nam euismod, tellus vitae interdum consectetur, velit odio porttitor leo, ut sagittis nunc elit sed urna. Mauris suscipit, augue porta venenatis egestas, purus diam sagittis arcu, ac vestibulum ex augue et sapien. Nunc ac mauris ut tellus porttitor molestie id in est. Curabitur euismod facilisis leo id porta. Sed ac magna congue, lobortis purus ut, pretium eros. Sed congue, sem eget rhoncus luctus, quam arcu imperdiet massa, id bibendum orci odio sit amet orci.
-           </h5>
+             Phasellus nisi nisl, tempor feugiat urna a, iaculis placerat turpis. Ut maximus euismod fermentum. Nam at felis maximus, cursus mauris quis, eleifend libero. Nam euismod, tellus vitae interdum consectetur, velit odio porttitor leo, ut sagittis nunc elit sed urna. Mauris suscipit, augue porta venenatis egestas,
+           </h3>
             <div>
-              <button onClick={this.scrollToView3}>Next</button>
+              <br />
+              <br />
+              <button className="" onClick={this.scrollToView3}></button>
             </div>
           </div>
         </section>
         <section>
           <div className="view3">
-            <h1>Lorem ipsum dolor sit amet, adipiscing elit.</h1>
+            <h1>The world is waiting for you...</h1>
           </div>
         </section>
      </div>
