@@ -81,22 +81,20 @@ module.exports = {
     })
   },
 
-    addFunds: function(req, res, next){
-    const db = req.app.get('db')
-
-    const user_id = req.params.user_id;
-
-    // console.log(req.body);
-    if (req.body.newGoal.length === 0) {
-      req.body.newGoal =  req.body.goal;
-    }
-    db.insertFunds([user_id, req.body.newBalance, req.body.newGoal])
-    .then(results => {
-      res.status(200).json(results)
-    })
-    .catch(err => {
-      console.log(err)
-      res.status(500).json(err)
-    })
+  addFunds: function(req, res, next){
+  const db = req.app.get('db')
+  const user_id = req.params.user_id;
+  if (req.body.newGoal.length === 0) {
+    req.body.newGoal =  +req.body.goal;
   }
+  const theBalance = +req.body.balance + +req.body.newBalance;
+  db.insertFunds([user_id, theBalance, req.body.newGoal])
+  .then(results => {
+    res.status(200).json(results)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
+}
 }

@@ -5,6 +5,7 @@ import Packages from '../../containers/Packages/Packages';
 
 // import { getUser } from '../../actions/index';
 
+import firebase from 'firebase';
 import { firebaseApp } from '../../firebase';
 import axios from 'axios';
 
@@ -36,8 +37,8 @@ handleNewGoal(event) {
 }
 
 addFunds(event) {
-  const { email, newBalance, newGoal, goal } = this.state;
-  axios.post('/api/addFunds/' + email, {email, newBalance, newGoal, goal})
+  const { email, newBalance, newGoal, goal, balance } = this.state;
+  axios.post('/api/addFunds/' + email, {email, newBalance, newGoal, goal, balance })
   axios.get('/api/user/' + email)
     .then(response => {
       this.setState({
@@ -48,25 +49,31 @@ addFunds(event) {
   }
 
 
-componentWillMount() {
-  let theUser;
-    for (let key in localStorage) {
-      if (key.includes("firebase:authUser")) {
-        theUser = JSON.parse(localStorage.getItem(key)).email
+  componentWillMount() {
+    let ourUser = firebase.auth().currentUser;
+    let theUser;
+    if (ourUser != null) {
+       theUser = firebase.auth().currentUser.email;
+    } else {
+      for (let key in localStorage) {
+        if (key.includes("firebase:authUser")) {
+          theUser = JSON.parse(localStorage.getItem(key)).email
+
+        }
       }
     }
-    this.setState({email: theUser})
-    axios.get('/api/user/' + theUser)
-    .then(response => {
-      this.setState({
-        balance: response.data[0].balance,
-        goal: response.data[0].goal
+      this.setState({email: theUser})
+      axios.get('/api/user/' + theUser)
+      .then(response => {
+        this.setState({
+          balance: response.data[0].balance,
+          goal: response.data[0].goal
+        })
       })
-    })
-    .catch((error) => {
-      console.log('error' + error)
-    })
-}
+      .catch((error) => {
+        console.log('error' + error)
+      })
+  }
 
 componentDidMount() {
   Modal.defaultProps = {
