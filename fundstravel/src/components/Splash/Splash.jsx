@@ -66,32 +66,34 @@ signIn() {
         <div className="login">
           <input value={this.state.email}
                 onChange={event => this.setState({email: event.target.value})}
-                className="" placeholder="Username"></input>
-                  <input className="form-control" value={this.state.password}
+                className="form-control" placeholder="Username"></input>
+                <br />
+                <input className="form-control" value={this.state.password}
                   type="password"
                   onChange={event => this.setState({password: event.target.value})}
-                  placeholder="Password"></input>
+                   placeholder="Password"></input>
+                   <br />
                   <button onClick={() => this.signIn()}
-                          className="loginButton">Login</button>
+                          className="waves-effect waves-light btn">-Login-</button>
                 <br />
                 <br />
-                <Modal header='Create Account'
-              	       trigger={
-              		<Button className='waves-effect waves-light btn'>Join!</Button>
-              	               }>
+                <Modal className="modal1 center-align" header='Create Account'
+                         trigger={
+                      <Button className='waves-effect waves-light btn'>-Join!-</Button>
+                                 }>
                   <Row>
-                    <Input s={6} label="First Name" />
-                    <Input s={6} label="Last Name" />
-                    <Input type="password" label="password" s={12}
+                    <Input s={6} placeholder="First Name" />
+                    <Input s={6} placeholder="Last Name"  />
+                    <Input type="password" placeholder="Password"s={12}
                             value={this.state.password}
                             onChange={this.handlePassword}/>
-                    <Input type="password" label="confirm password" s={12}
+                    <Input type="password" placeholder="Confirm Password"  s={12}
                             value={this.state.confirm}
                             onChange={this.handleConfirm}/>
-                    <Input type="email" label="Email" s={12}
+                    <Input type="email" placeholder="Email" s={12}
                             value={this.state.email}
                             onChange={this.handleEmail}/>
-                    <button className=""
+                    <button className="modal"
                             onClick={event => this.handleClick(event)}>
                             {' '}Submit{' '}
                     </button>
