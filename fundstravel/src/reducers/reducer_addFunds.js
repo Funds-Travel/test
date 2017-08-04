@@ -1,6 +1,6 @@
 import { ADD_FUNDS } from '../actions/index.js';
 
-const initial = { funds: [], postingFunds: false, error: null }
+const initial = { funds: [], postingFunds: false, error: null };
 
 export default function(state = initial, action) {
   switch (action.type) {

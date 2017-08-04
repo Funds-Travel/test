@@ -1,6 +1,6 @@
 import { GET_USER } from '../actions/index.js';
 
-const initial = { user: {}, gettingUser: false, error: null }
+const initial = { user: {}, gettingUser: false, error: null };
 
 export default function(state = initial, action) {
   switch (action.type) {

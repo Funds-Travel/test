@@ -1,14 +1,11 @@
 import axios from 'axios';
 
-// actions
 export const GET_PACKAGES = 'packages/GET_PACKAGES';
 export const POST_USER = 'POST_USER';
 export const SIGNED_IN = 'SIGNED_IN';
 export const ADD_FUNDS = 'ADD_FUNDS';
 export const GET_USER = 'GET_USER';
 
-// action creators
-// action with promise
 export function getPackages(funds){
   const request = axios.get('/api/packages/' + funds)
   return {
@@ -16,7 +13,6 @@ export function getPackages(funds){
     payload: request
   }
 }
-
 export function postUser(user) {
   const request = axios.post('/api/traveler', user)
   return {

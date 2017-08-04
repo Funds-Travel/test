@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import './Home.css'
-// import Packages from '../../containers/Packages/Packages';
-import NavBar from '../NavBar/NavBar'
-
+import NavBar from '../NavBar/NavBar';
+import './Home.css';
 
 class Home extends Component {
   render() {
@@ -10,7 +8,6 @@ class Home extends Component {
         <div className='homeDiv'>
           <NavBar />
           <div className='homePackageDiv'>
-
           </div>
         </div>
     )
