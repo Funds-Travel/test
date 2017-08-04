@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal, Row, Input } from 'react-materialize';
-// import { bindActionCreators } from 'redux';
-import { postUser, logUser, getUser } from '../../actions/index';
+import { postUser, getUser } from '../../actions/index';
 import { firebaseApp } from '../../firebase';
-
-
 import './Splash.css';
 import '../Join/Join.css';
+// import { bindActionCreators } from 'redux';
 
 class Splash extends Component {
   constructor() {
@@ -19,7 +17,6 @@ class Splash extends Component {
         message: ''
       }
     };
-
     this.handleEmail = this.handleEmail.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
     this.handleConfirm = this.handleConfirm.bind(this);
@@ -27,7 +24,6 @@ class Splash extends Component {
     this.signUp = this.signUp.bind(this);
     this.scrollToView2 = this.scroll.bind(this, ".view2")
     this.scrollToView3 = this.scroll.bind(this, ".view3")
-
 }
 
 handleEmail(event) {
@@ -46,9 +42,7 @@ handleClick(event) {
   event.preventDefault();
   // Something needs to happen with the input
   this.props.postUser(this.state);
-
   this.signUp(this.props)
-
 }
 signUp() {
   const { email, password } = this.state;

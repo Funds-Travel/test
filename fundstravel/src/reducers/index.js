@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   postUser: PostUserReducer,
   packet: GetPackages,
   addFunds: AddFundsReducer,
-  user: GetUser
+  user: GetUser,
   // funds: GetFunds
 
 });

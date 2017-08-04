@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store from '../store/index';
-
 import Join from './Join/Join';
 import Splash from './Splash/Splash';
 import Home from './Home/Home';

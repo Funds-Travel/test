@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getPackages, getUser } from '../../actions/index';
-
 import Package from '../../components/Package/Package';
 import './Packages.css';
 
@@ -11,17 +10,14 @@ class Packages extends Component {
     componentDidMount() {
       // console.log(this.props.user.user.data[0].goal)
       let goal = this.props.user.user.data[0].goal
-      // console.log(goal)
+      // // console.log(goal)
       this.props.getPackages(goal)
-
     }
     componentWillReceiveProps(nextProps) {
-
       // console.log(this.props)
       // console.log(nextProps)
     }
     render() {
-      console.log(this.props)
         const myPackages = this.props.packages.map(item => {
           return (
               <Package item={item} key={item.id} />
@@ -35,7 +31,6 @@ class Packages extends Component {
       )
     }
 }
-
 
 function mapStateToProps({user, packet}) {
   return {
