@@ -1,11 +1,8 @@
 import { POST_USER } from '../actions/index';
-const initialState = {
-  postingUser: false,
-  error: null,
-  user: null
-}
-export default function(state=initialState, action) {
 
+const initial = { postingUser: false, error: null, user: null };
+
+export default function(state = initial, action) {
   switch (action.type) {
     case POST_USER + '_PENDING':
       return {...state, postingUser: true}

@@ -1,2 +1,3 @@
 select *
-from packages_table;
+from packages_table
+where total_price <= $1;

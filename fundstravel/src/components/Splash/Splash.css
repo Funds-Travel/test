@@ -33,9 +33,8 @@ section {
   width: 100vw !important;
   display: table-cell;
   vertical-align: top;
-
   padding-top: 1%;
-  background-image: url('https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508_1280.jpg');
+  background-image: url('../../img/bg_image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -72,7 +71,7 @@ section {
   width: 100vw !important;
   display: table-cell;
   vertical-align: middle;
-  background-image: url('https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508_1280.jpg');
+  background-image: url('../../img/bg_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -141,7 +140,7 @@ section {
 .logoText {
   padding-top: 10%;
   padding-left: 5%;
-  font-size: 8.2rem !important;
+  font-size: 9.2rem !important;
   color: #C5DCEF;
   -webkit-text-stroke-width: 1.5px;
    -webkit-text-stroke-color: black;
@@ -184,3 +183,17 @@ section {
 input::placeholder {
   color: black;
 }
+
+.modal {
+  margin-top: 10% !important;
+  margin-left: 33% !important;
+
+ text-align: center !important;
+  width: 40% !important;
+  min-height: 45% !important;
+}
+
+.header {
+  padding-left: 10% !important;
+}
+

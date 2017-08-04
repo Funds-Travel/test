@@ -43,7 +43,7 @@ img {
 
 
 
-img {
+/*img {
 
   min-height: 30vh !important;
   max-height: 30vh !important;
@@ -53,12 +53,12 @@ img {
 
   object-fit: fill;
 
-}
+}*/
 
 
-/*
-.eachPackageDiv {
-  float: left;
+
+/*.eachPackageDiv {
+
 
   text-align: center;
   margin: 1.5%;

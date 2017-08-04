@@ -1,4 +1,4 @@
-import {GET_PACKAGES} from '../actions/index.js'
+import {GET_PACKAGES} from '../actions/index.js';
 
 const initial = { packages: [], fetchingPackages: false, error: null };
 

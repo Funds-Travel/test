@@ -59,3 +59,40 @@ li {
   border-top-right-radius: 5%;
 
 }*/
+.eachPackageDiv-container {
+  padding-right: 15px;
+  margin-top: 1%;
+
+
+}
+.eachPackageDiv ul {
+  list-style: none;
+  padding: 0;
+
+}
+.eachPackageDiv {
+  display: flex ;
+  margin-bottom: 4%;
+  /*float: right;
+  width: 30vw;*/
+  height: 53vh;
+  min-height: 350px;
+  max-height: 500px;
+  background-color: white;
+  opacity: .9;
+  border: 1px solid black;
+  list-style: none;
+  margin-right: 0;
+
+
+}
+
+img {
+  height: 32vh;
+  max-height: 350px;
+  width: 100%;
+  object-fit: fill;
+  padding-bottom: 2%;
+
+
+}

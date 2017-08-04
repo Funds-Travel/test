@@ -1,22 +1,18 @@
 import axios from 'axios';
 
-// actions
 export const GET_PACKAGES = 'packages/GET_PACKAGES';
 export const POST_USER = 'POST_USER';
 export const SIGNED_IN = 'SIGNED_IN';
 export const ADD_FUNDS = 'ADD_FUNDS';
-// export const GET_USER = 'GET_USER';
+export const GET_USER = 'GET_USER';
 
-// action creators
-// action with promise
-export function getPackages(user){
-  const request = axios.get('/api/packages')
+export function getPackages(funds){
+  const request = axios.get('/api/packages/' + funds)
   return {
     type: GET_PACKAGES,
     payload: request
   }
 }
-
 export function postUser(user) {
   const request = axios.post('/api/traveler', user)
   return {
@@ -27,22 +23,22 @@ export function postUser(user) {
 export function logUser(email) {
   const action = {
     type: SIGNED_IN,
-    email
+    payload: email
   }
   return action
 }
-export function addFunds(email) {
-  const request = axios.post('/api/addFunds/' + email)
+export function addFunds(user) {
+  const request = axios.post('/api/addFunds/' + user[0], user)
   return {
     type: ADD_FUNDS,
     payload: request
   }
 }
-//
-// export function getUser(user){
-//   const request = axios.get('/api/user/:email')
-//   return {
-//     type: GET_USER,
-//     payload: request
-//   }
-// }
+
+export function getUser(user){
+  const request = axios.get('/api/user/' + user)
+  return {
+    type: GET_USER,
+    payload: request
+  }
+}
