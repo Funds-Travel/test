@@ -72,10 +72,9 @@ class NavBar extends Component {
       </Button>]
       }
     }
+
   render() {
     return (
-
-
       <div className="container-fluid nav-container">
         <div className="nav-side-menu col-sm-4 col-md-3">
             <a href="#!" className="brand">Travel Funds</a>
@@ -97,6 +96,7 @@ class NavBar extends Component {
                 <span className="gray-text">
                   <h3>Balance: ${this.state.balance}</h3>
                   <h3>Goal: ${this.state.goal}</h3>
+
                   <br />
                   <Modal header='Add Funds' trigger={
                     <Button className=" ">Add Funds</Button>
@@ -116,7 +116,9 @@ class NavBar extends Component {
 
         </div>
 
+
         <div className="col-sm-offset-4 col-sm-8 col-md-9 col-md-offset-3 container ">
+
 
           <Packages />
 

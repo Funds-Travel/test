@@ -1,7 +1,9 @@
+
 .nav-container {
   padding: 0;
 
 }
+
 .background {
   background-image: url('');
 }
@@ -9,6 +11,7 @@
 .signout_btn {
   margin-top: 50px;
 }
+
 
 .navFix{
 position: fixed;
@@ -206,7 +209,9 @@ button {
   margin-top: 10% !important;
   margin-left: 33% !important;
 
+
  text-align: center !important;
   width: 40% !important;
   min-height: 45% !important;
+
 }

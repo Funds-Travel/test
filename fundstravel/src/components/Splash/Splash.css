@@ -33,7 +33,6 @@ section {
   width: 100vw !important;
   display: table-cell;
   vertical-align: top;
-
   padding-top: 1%;
   background-image: url('../../img/bg_image.jpg');
   background-size: cover;
@@ -148,7 +147,6 @@ section {
 }
 
 .about {
-
   color: black;
   -webkit-text-stroke-width: .5px;
    -webkit-text-stroke-color: black;
@@ -198,3 +196,4 @@ input::placeholder {
 .header {
   padding-left: 10% !important;
 }
+

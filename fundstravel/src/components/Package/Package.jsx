@@ -3,6 +3,7 @@ import './Package.css'
 
 export default function Package({item}) {
   return (
+
     <div className="col-sm-6 col-md-4 eachPackageDiv-container">
       <div className="eachPackageDiv">
         <a href= {item.link}>

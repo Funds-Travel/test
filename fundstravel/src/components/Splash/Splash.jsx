@@ -20,6 +20,7 @@ class Splash extends Component {
     this.handleConfirm = this.handleConfirm.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.signUp = this.signUp.bind(this);
+    this.scrollToView1 = this.scroll.bind(this, ".view1")
     this.scrollToView2 = this.scroll.bind(this, ".view2")
     this.scrollToView3 = this.scroll.bind(this, ".view3")
 }
@@ -108,10 +109,13 @@ signIn() {
        </section>
        <section>
          <div className="view2">
-           <h3 className="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum lacus sit amet enim pulvinar lacinia. Etiam facilisis neque vehicula, elementum tellus rhoncus, sollicitudin mi. Donec facilisis urna vitae justo tempor, ut euismod enim sodales. Nunc vel ullamcorper orci, eget lobortis lectus. Suspendisse potenti. Integer blandit nisl eget nunc congue interdum. Aliquam imperdiet magna non justo ultrices, sit amet bibendum dui aliquam. Donec non eleifend orci. Nunc finibus risus pulvinar orci tristique, ac volutpat est cursus.
+           <h3 className="about">
+We started this project with the idea that the Travel industry has an actual niche that remains untapped. Our target demographic was the untraveled, the grandparent, the technically clumsy or easily stressed consumer that could not digest the massive options they were presented when browsing for travel.
 
-             Phasellus nisi nisl, tempor feugiat urna a, iaculis placerat turpis. Ut maximus euismod fermentum. Nam at felis maximus, cursus mauris quis, eleifend libero. Nam euismod, tellus vitae interdum consectetur, velit odio porttitor leo, ut sagittis nunc elit sed urna. Mauris suscipit, augue porta venenatis egestas, purus diam sagittis arcu, ac vestibulum ex augue et sapien. Nunc ac mauris ut tellus porttitor molestie id in est. Curabitur euismod facilisis leo id porta. Sed ac magna congue, lobortis purus ut, pretium eros. Sed congue, sem eget rhoncus luctus, quam arcu imperdiet massa, id bibendum orci odio sit amet orci.
-           </h3>
+Blasphemy? Not quite. Travel agencies have existed for centuries because consumers that could afford to, subscribe to the simplicity of travel options offered.
+
+Our app, although not specifically catered to that crowd is actually designed to perform the same exact functions. Whats more, we have designed it specifically for the wishful consumer, allowing them to put funds aside and visually see what they can afford. 
+          </h3>
             <div>
               <br />
               <br />
