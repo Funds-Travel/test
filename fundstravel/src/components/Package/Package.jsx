@@ -5,16 +5,17 @@ import './Package.css'
 //need to make sure item is the correct reference...
 export default function Package({item}) {
   return (
-    <div className="col m4 hoverable">
+    <div className="col-sm-6 col-md-4 eachPackageDiv-container">
+    <div className="eachPackageDiv">
       <a href= {item.link}>
-        <div className="card hoverable" key={item.id}>
-          <ul>
+        <div className="" key={item.id}>
+          <ul className=" ">
             <li>
-              <div className="card-image">
+              <div className="">
                 <img className="responsive-img" src={item.hotel_image} alt={item.hotel_name}/>
               </div>
                 <div>
-                  <h5 className="fontStyle" >{item.city_country}</h5>        
+                  <h5 className="locationStyle" >{item.city_country}</h5>
                 </div>
               <div className="card-content">
                 <p className="fontStyle">{item.hotel_name} <br/>
@@ -49,6 +50,7 @@ export default function Package({item}) {
         </div>
       </a>
     </div>
+  </div>
   )
 }
 

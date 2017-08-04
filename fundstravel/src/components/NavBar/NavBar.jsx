@@ -90,42 +90,30 @@ componentDidMount() {
 
   render() {
     return (
-      <div className="">
-        <div className="navbar-fixed">
-          <nav>
-            <div className="nav-wrapper   blue lighten-3">
-              <a href="#!" className="brand-logo center   blue lighten-3">Travel Funds</a>
-            </div>
-          </nav>
-        </div>
+      <div className="container-fluid nav-container">
+        <div className="nav-side-menu col-sm-4 col-md-3">
+            <a href="#!" className="brand">Travel Funds</a>
+            <i className="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
-        <div className="container">
-
-        </div>
-
-
-
-        <div className="row ">
-          <div className="col s12 m12 l3 navFix show-on-medium-and-up">
-
-            <div className="card-panel small fixed  blue-grey lighten-4">
-              <span className="gray-text"><h4>Welcome</h4></span>
-              <span className="gray-text"><h5> {this.state.email}</h5></span>
-              <div className="signout_btn">
-                <button className="waves-effect waves-light btn red lighten-1"
-                        onClick={() => this.signOut()} >Sign out</button>
-              </div>
-
+        <div className="menu-list">
+            <div className="navWelcome">
+                  <span className="gray-text"><h2>Welcome</h2></span>
+                  <span className="gray-text"><h4> {this.state.email}</h4></span>
+                  <div className="signout_btn">
+                    <button className="btn btn-primary red-background "
+                            onClick={() => this.signOut()} >Sign out</button>
             </div>
 
-
-              <div className="card-panel  blue-grey lighten-4">
+   </div>
+ </div>
+<br />
+              <div className="navFunds">
                 <span className="gray-text">
-                  <h4>Balance: ${this.state.balance}</h4>
-                  <h4>Goal: ${this.state.goal}</h4>
+                  <h3>Balance: ${this.state.balance}</h3>
+                  <h3>Goal: ${this.state.goal}</h3>
                   <br />
                   <Modal header='Add Funds' trigger={
-                    <Button waves='light'>Add Funds</Button>
+                    <Button className=" ">Add Funds</Button>
                   }>
                     <Row>
                       <Input type="s" label="Add Funds" s={12}
@@ -140,13 +128,11 @@ componentDidMount() {
                 </span>
               </div>
 
+        </div>
 
-          </div>
+        <div className="col-sm-offset-4 col-sm-8 col-md-9 col-md-offset-3 container ">
 
-          <div className=" eachPackageDiv col s12 m12 l9 right">
-            <Packages />
-
-          </div>
+          <Packages />
 
         </div>
 

@@ -22,9 +22,11 @@ class Packages extends Component {
         })
 
       return (
+
         <div className="allPackagesDiv row">
           {myPackages}
           </div>
+
       )
     }
 }

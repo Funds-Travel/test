@@ -141,13 +141,14 @@ section {
 .logoText {
   padding-top: 10%;
   padding-left: 5%;
-  font-size: 8.2rem !important;
+  font-size: 9.2rem !important;
   color: #C5DCEF;
   -webkit-text-stroke-width: 1.5px;
    -webkit-text-stroke-color: black;
 }
 
 .about {
+
   color: black;
   -webkit-text-stroke-width: .5px;
    -webkit-text-stroke-color: black;

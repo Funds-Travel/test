@@ -78,11 +78,13 @@ signIn() {
         <div className="login">
           <input value={this.state.email}
                 onChange={event => this.setState({email: event.target.value})}
-                className="inputStyle" placeholder="Username"></input>
-                <input className=""value={this.state.password}
+                className="form-control" placeholder="Username"></input>
+                <br />
+                <input className="form-control" value={this.state.password}
                   type="password"
                   onChange={event => this.setState({password: event.target.value})}
                    placeholder="Password"></input>
+                   <br />
                   <button onClick={() => this.signIn()}
                           className="waves-effect waves-light btn">Login</button>
                 <br />
