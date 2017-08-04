@@ -11,6 +11,8 @@ import TopNav from '../TopNav/TopNav';
 import Welcome from '../Welcome/Welcome';
 import Funds from '../Funds/Funds';
 
+// import OurFilter from '../OurFilter/OurFilter';
+
 class NavBar extends Component {
   // constructor(props) {
   //   super(props);
@@ -99,9 +101,11 @@ class NavBar extends Component {
     )
   }
 }
-function mapStateToProps({user}) {
+function mapStateToProps({user, packet}) {
   return {
-  user: user.user}
+  user: user.user,
+  packet: packet.packages
+  }
 }
 const mapDispatchToProps = {
   getPackages,

@@ -69,7 +69,7 @@ module.exports = {
     // console.log("serverCtrl req Session ",req.session)
     // console.log('params',req.params.funds)
     // console.log('body', req.body)
-    db.getPackage(req.params.funds)
+    db.getPackage(5000)
     .then(results => {
       // console.log(results)
       // console.log(results);
