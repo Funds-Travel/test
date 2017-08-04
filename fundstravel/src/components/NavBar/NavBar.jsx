@@ -96,9 +96,6 @@ componentDidMount() {
   </Button>]
   }
 }
-componentWillUpdate() {
-this.handleNewGoal()
-}
 
 
   render() {
