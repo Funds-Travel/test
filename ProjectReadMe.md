@@ -1,5 +1,5 @@
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            Travel Funds
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+______________________________________________Travel Funds_______________________________________________
 
 We started this project with the idea that the Travel industry has an actual niche that remains untapped. 
 Our target demographic was the untraveled, the grandparent, the technically clumsy or easily stressed consumer 
