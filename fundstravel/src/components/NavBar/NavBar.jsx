@@ -5,9 +5,12 @@ import Packages from '../../containers/Packages/Packages';
 
 // import { getUser } from '../../actions/index';
 
-import firebase from 'firebase';
+// import firebase from 'firebase';
 import { firebaseApp } from '../../firebase';
-import axios from 'axios';
+// import axios from 'axios';
+
+import { getPackages, addFunds, getUser } from '../../actions/index';
+// import { addFunds } from '../../actions/index';
 
 import './NavBar.css';
 
@@ -38,41 +41,48 @@ handleNewGoal(event) {
 
 addFunds(event) {
   const { email, newBalance, newGoal, goal, balance } = this.state;
-  axios.post('/api/addFunds/' + email, {email, newBalance, newGoal, goal, balance })
-  axios.get('/api/user/' + email)
-    .then(response => {
-      this.setState({
-        balance: response.data[0].balance,
-        goal: response.data[0].goal
-      })
-    })
+  let theUser = [email, newBalance, newGoal, goal, balance];
+  this.props.addFunds(theUser)
+  // axios.post('/api/addFunds/' + email, {email, newBalance, newGoal, goal, balance })
+  // axios.get('/api/user/' + email)
+  //   .then(response => {
+  //     this.setState({
+  //       balance: response.data[0].balance,
+  //       goal: response.data[0].goal
+  //     })
+  //   })
+
   }
 
 
   componentWillMount() {
-    let ourUser = firebase.auth().currentUser;
-    let theUser;
-    if (ourUser != null) {
-       theUser = firebase.auth().currentUser.email;
-    } else {
-      for (let key in localStorage) {
-        if (key.includes("firebase:authUser")) {
-          theUser = JSON.parse(localStorage.getItem(key)).email
+    const user = this.props.user.data[0];
+    this.setState({balance: user.balance, goal: user.goal, email: user.user_email})
 
-        }
-      }
-    }
-      this.setState({email: theUser})
-      axios.get('/api/user/' + theUser)
-      .then(response => {
-        this.setState({
-          balance: response.data[0].balance,
-          goal: response.data[0].goal
-        })
-      })
-      .catch((error) => {
-        console.log('error' + error)
-      })
+    // let ourUser = firebase.auth().currentUser.email;
+    // this.props.getUser(ourUser)
+    // let theUser;
+    // if (ourUser != null) {
+    //    theUser = firebase.auth().currentUser.email;
+    // } else {
+    //   for (let key in localStorage) {
+    //     if (key.includes("firebase:authUser")) {
+    //       theUser = JSON.parse(localStorage.getItem(key)).email
+    //
+    //     }
+    //   }
+    // }
+    //   this.setState({email: theUser})
+    //   axios.get('/api/user/' + theUser)
+    //   .then(response => {
+    //     this.setState({
+    //       balance: response.data[0].balance,
+    //       goal: response.data[0].goal
+    //     })
+    //   })
+    //   .catch((error) => {
+    //     console.log('error' + error)
+    //   })
   }
 
 componentDidMount() {
@@ -86,6 +96,10 @@ componentDidMount() {
   </Button>]
   }
 }
+componentWillUpdate() {
+this.handleNewGoal()
+}
+
 
   render() {
     return (
@@ -156,8 +170,15 @@ componentDidMount() {
 }
 
 
-function mapStateToProps(state) {
-  return state
+function mapStateToProps({user}) {
+  return {
+  user: user.user}
 }
 
-export default connect(mapStateToProps, null)(NavBar)
+const mapDispatchToProps = {
+  getPackages,
+  addFunds,
+  getUser
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

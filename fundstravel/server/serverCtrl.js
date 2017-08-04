@@ -8,7 +8,7 @@ module.exports = {
     // create the traveler as an array
     db.createTraveler([email])
     .then(results => {
-      console.log(results)
+      // console.log(results)
       // get the first index from the array
       const user = results[0]
       return user
@@ -19,7 +19,7 @@ module.exports = {
       res.status(500).json(err)
     })
     .then(user => {
-      console.log(user)
+      // console.log(user)
       // create the initil fund for the user,
       return db.createFund([user.id])
       .then(results => {
@@ -50,7 +50,6 @@ module.exports = {
   // Get user balance and goals
   getUser: function(req, res, next){
     const db = req.app.get('db')
-
     const email = req.params.email
 
     db.getUser([email])
@@ -68,8 +67,11 @@ module.exports = {
     const db = req.app.get('db')
     //const {price, name, location, description, img, rating, travelers} = req.body;
     // console.log("serverCtrl req Session ",req.session)
-    db.getPackage()
+    // console.log('params',req.params.funds)
+    // console.log('body', req.body)
+    db.getPackage(req.params.funds)
     .then(results => {
+      // console.log(results)
       // console.log(results);
       // console.log(req.user)
       // theUser = { user: req.user}
@@ -83,12 +85,12 @@ module.exports = {
 
   addFunds: function(req, res, next){
   const db = req.app.get('db')
-  const user_id = req.params.user_id;
-  if (req.body.newGoal.length === 0) {
-    req.body.newGoal =  +req.body.goal;
+  const user_id = req.body[0];
+  if (req.body[2].length === 0) {
+    req.body[2] =  +req.body[3];
   }
-  const theBalance = +req.body.balance + +req.body.newBalance;
-  db.insertFunds([user_id, theBalance, req.body.newGoal])
+  const theBalance = +req.body[4] + +req.body[1];
+  db.insertFunds([user_id, theBalance, req.body[2]])
   .then(results => {
     res.status(200).json(results)
   })

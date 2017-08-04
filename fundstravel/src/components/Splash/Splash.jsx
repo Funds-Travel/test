@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal, Row, Input } from 'react-materialize';
-import { bindActionCreators } from 'redux';
-import { postUser } from '../../actions/index';
+// import { bindActionCreators } from 'redux';
+import { postUser, logUser, getUser } from '../../actions/index';
 import { firebaseApp } from '../../firebase';
+
 
 import './Splash.css';
 import '../Join/Join.css';
@@ -45,11 +46,13 @@ handleClick(event) {
   event.preventDefault();
   // Something needs to happen with the input
   this.props.postUser(this.state);
+
   this.signUp(this.props)
 
 }
 signUp() {
   const { email, password } = this.state;
+  this.props.getUser(email)
   firebaseApp.auth().createUserWithEmailAndPassword(email, password)
     .catch(error => {
       this.setState({error})
@@ -58,6 +61,7 @@ signUp() {
 
 signIn() {
     const { email, password } = this.state;
+    this.props.getUser(email)
     firebaseApp.auth().signInWithEmailAndPassword(email, password)
       .catch(error => {
         this.setState({error})
@@ -137,11 +141,19 @@ signIn() {
   }
 }
 
-function mapStateToProps(state) {
-  return state;
+function mapStateToProps({user}) {
+  return {
+  user: user
+  }
 }
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ postUser }, dispatch);
+
+const mapDispatchToProps = {
+  getUser,
+  postUser
 }
+// function mapDispatchToProps(dispatch) {
+//   console.log(this.props)
+//   return bindActionCreators({ postUser, logUser, getUser }, dispatch);
+// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash)

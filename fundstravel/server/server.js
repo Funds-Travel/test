@@ -92,7 +92,7 @@ app.use(expressSession({secret: config.sessionSecret,
 
 
 // endpoints
-app.get('/api/packages', serverCtrl.getPackage)
+app.get('/api/packages/:funds', serverCtrl.getPackage)
 app.get('/api/user/:email', serverCtrl.getUser)
 app.post('/api/traveler', serverCtrl.createTraveler)
 app.post('/api/addFunds/:user_id', serverCtrl.addFunds)

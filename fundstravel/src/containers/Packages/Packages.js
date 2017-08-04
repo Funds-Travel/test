@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getPackages } from '../../actions/index';
+import { getPackages, getUser } from '../../actions/index';
 
 import Package from '../../components/Package/Package';
 import './Packages.css';
 
 class Packages extends Component {
     componentWillMount() {
-      this.props.getPackages()
+    }
+    componentDidMount() {
+      // console.log(this.props.user.user.data[0].goal)
+      let goal = this.props.user.user.data[0].goal
+      // console.log(goal)
+      this.props.getPackages(goal)
+
     }
     componentWillReceiveProps(nextProps) {
 
@@ -15,6 +21,7 @@ class Packages extends Component {
       // console.log(nextProps)
     }
     render() {
+      console.log(this.props)
         const myPackages = this.props.packages.map(item => {
           return (
               <Package item={item} key={item.id} />
@@ -33,10 +40,12 @@ class Packages extends Component {
 function mapStateToProps({user, packet}) {
   return {
     packages: packet.packages,
+    user: user
   }
 }
 
 const mapDispatchToProps = {
-  getPackages
+  getPackages,
+  getUser
 }
 export default connect(mapStateToProps, mapDispatchToProps )(Packages)
