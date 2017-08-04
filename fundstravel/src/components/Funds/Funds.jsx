@@ -19,6 +19,14 @@ class Funds extends Component {
     const { email, newBalance, newGoal, goal, balance } = this.state;
     let theUser = [email, newBalance, newGoal, goal, balance];
     this.props.addFunds(theUser)
+    .then(response => {
+      this.props.getUser(theUser[0])
+      .then(response => {
+        this.setState({balance: response.value.data[0].balance,
+                        goal: response.value.data[0].goal})
+        // console.log(response.value.data[0])
+      })
+    })
     // axios.post('/api/addFunds/' + email, {email, newBalance, newGoal, goal, balance })
     // axios.get('/api/user/' + email)
     //   .then(response => {
@@ -39,11 +47,9 @@ class Funds extends Component {
       </Button>]
       }
     }
-    // componentWillUpdate(nextProps, nextState) {
-    //   if(nextProps != nextState) {
-    //     this.props.getUser()
-    //   }
-    // }
+    componentWillUpdate() {
+
+    }
   render() {
     // console.log(this.props)
     return (
