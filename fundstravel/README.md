@@ -7,7 +7,6 @@ Actions (dm6-funds-travel/fundstravel/src/actions/index.js)
 Example:
 export const GET_PACKAGES = 'packages/GET_PACKAGES';
 
-(See notes on line 4)
 
 export function getPackages(funds){
   const request = axios.get('/api/packages/' + funds)
@@ -17,7 +16,7 @@ export function getPackages(funds){
   }
 }
 
-* axios calls the api. 
+* axios calls the anything that requires /api. 
 
 Actions have a "type" and a "payload: request".
 - type               =   
@@ -87,22 +86,34 @@ Basically container is a Smart or Stateful component while a component is Dumb o
 Line 2 is importing the { connect } which is the "STORE" middleware.
 * middleware is what is passing data
 
-Line 3 is importing objects from actions (line 13).
+Line 3 is importing functions from actions. (line 9 actions/index.js).
+The function is basically calling to getpackages for a req.body.
 
 ! IMPORTANT -----------------
 Despite the layout of code, an async call is occurring within this component and rendering mapDispatchToProps (action payload).
 !-----------------
 
-Line 12(this.props) is making the Async call to props in line 41.
-(mapStateToProp is pushing reducer into props. props is then passed "packages" allowing access to it. (this.props.packages). 
+Line 8 componentWillMount() mounts line 9.
 
-Line 25 is using the map method to get the object, assigning the object key as item and rendering it into <Package />.
+Line 9(this.props) is making the Async call to props in line 45.
+(mapStateToProp is now allowing the component to shop from the store. THe props(packet.packages) is then passed as "packages" allowing this component access to it. (this.props.packages). 
+
+Line 12 to 18 are mapping a an input filter to the state. This is continued on line 35-41.
+
+Line 21 is the assignment of myPackages = props.packages.
+
+Line 29 is using the map method to get the object, assigning the object key as item and rendering it into <Package />.
 Example: { item.price }
 Line 27 is continued in components
 
+Line 29 is where myPackages is being mapped and passed to components/packages/packages. See Line 127 of this page.
 
+Line 31 is where <Package /> (components/Package/Package) is being rendered with HTML and CSS. See line 125 of this page for continued explanation.
 
-* additional practices: bindactionCreators - binds dispatched items to props.
+Line 35-41 is assigning the state.priceFilter the value of whatever the input is on the e.target.value(text input field). This field is assigned to be watched with an "onChange" to set the state in the super(). This is where the filter then listens to the state and applies the state.priceFilter(e.target.value).
+
+* disregard: 
+additional practices: bindactionCreators - binds dispatched items to props.
 
 
 -----------------------------------------------------------
@@ -110,11 +121,12 @@ Line 27 is continued in components
 Components (dm6-funds-travel/fundstravel/src/components/Packages/Packages)
 -----------------------------------------------------------
 
-Line 27 on the component is passing <Package /> with values.
-This <Package /> component is really a function(component) that is rendering the mapped items (item={item} key={item.id}).
+
+This component is called a dumb component in that we will use this to render data.
+
+Line 4 we define our export as well as bring in the object we were given in containers/packages/packages.
 
 -----------------------------------------------------------
-
 
 That's it. That's React Redux. 
 
