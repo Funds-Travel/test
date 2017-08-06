@@ -1,0 +1,73 @@
+/*.allPackagesDiv {
+
+}
+
+.eachPackageDiv {
+  display:  inline-block;
+
+  text-align: center;
+  margin: 1.5%;
+  width: 20vw;
+  height: 45vh;
+
+  background-color: white;
+  opacity: .9;
+
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+
+}*/
+
+/*.price {
+  color: #3D75A8;
+}
+
+img {
+  height: 30vh;
+  min-width: 20vw;
+  max-width: 20vw;
+
+  object-fit: fill;
+  float: left;
+  padding-bottom: 2%;
+
+}
+
+.cityCountry {
+
+}*/
+
+
+
+/*img {
+
+  min-height: 30vh !important;
+  max-height: 30vh !important;
+
+
+  min-width: 20vw !important;
+
+  object-fit: fill;
+
+}*/
+
+
+
+/*.eachPackageDiv {
+
+
+  text-align: center;
+  margin: 1.5%;
+  width: 20vw;
+
+  max-height: 45vh;
+
+
+  background-color: white;
+  opacity: .9;
+
+}*/

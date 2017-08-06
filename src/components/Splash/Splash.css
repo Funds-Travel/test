@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Nobile:700i');
+
+body {
+  font-family: 'Nobile', sans-serif;
+}
+
+.background {
+  display: table-cell;
+  vertical-align: rigfht;
+  width: 100vw;
+  /*height: 100vh;*/
+  background-size: cover;
+  overflow: hidden;
+  text-align: middle;
+  color: black;
+}
+
+section {
+ width: 100%;
+ display: table;
+ margin: 0;
+ max-width: none;
+ height: 100vh;
+}
+
+.view1 {
+  width: 100vw !important;
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 1%;
+  background-image: url('../../img/bg_image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: black;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+}
+
+.view2 {
+  width: 100vw !important;
+  text-align: right;
+  display: table-cell;
+  vertical-align: top;
+  background-image: url('http://wallpapercave.com/wp/c8MSprE.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-left: 38% !important;
+  text-emphasis-position: right;
+}
+
+.view3 {
+  width: 100vw !important;
+  display: table-cell;
+  vertical-align: middle;
+  background-image: url('../../img/bg_image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.logoBox {
+  padding: 33%;
+  height: 50px;
+  width: 50px;
+}
+
+.logo {
+  position:  center !important;
+  padding: 5%;
+  font-size: 3.5em !important;
+}
+
+
+.about {
+  font-size: 1.4em;
+  line-height: 200%;
+  /*padding: 10%;*/
+  font-family: 'Cabin';
+  text-align: left;
+}
+
+.login {
+  width: 15%;
+  padding-right: 3%;
+  float: right;
+  margin-top: 0;
+  float: top;
+}
+
+.inputStyle {
+  color: black !important;
+  opacity: .9;
+}
+
+
+.loginButton {
+  float: inherit !important;
+  margin-bottom: 2% !important;
+  background-color: #c8bdbd !important;
+  color: black;
+}
+
+
+
+.joinButton {
+  float: inherit !important;
+  margin-bottom: 1% !important;
+  background-color: #c8bdbd!important;
+  font-size: 1rem !important;
+  color: black
+}
+
+.logoText {
+  padding-top: 10%;
+  padding-left: 5%;
+  font-size: 9.2rem !important;
+  color: #C5DCEF;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.about {
+  color: black;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+}
+
+.nextButton {
+  background-image:url('https://cdn4.iconfinder.com/data/icons/essential-app-2/16/down-menu-arrow-botton-64.png') !important;
+  position:absolute;
+ z-index:100;
+ left:50%;
+ top:103em;
+ width:9em;
+ height:9em;
+ border-radius:50%;
+ font-size:0.5em;
+ display:block;
+ -webkit-animation-delay: 3s;
+}
+
+.nextNextButton {
+  background-image:url('https://cdn4.iconfinder.com/data/icons/essential-app-2/16/down-menu-arrow-botton-64.png') !important;
+  position:absolute;
+ z-index:100;
+ left:50%;
+ top: 200em;
+ width:9em;
+ height:9em;
+ border-radius:50%;
+ font-size:0.5em;
+ display:block;
+ -webkit-animation-delay: 3s;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.modal {
+  margin-top: 10% !important;
+  margin-left: 33% !important;
+  text-align: center !important;
+  width: 40% !important;
+  min-height: 45% !important;
+}
+
+.header {
+  padding-left: 10% !important;
+}
+
