@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nobile:700i');
 
-
 body {
   font-family: 'Nobile', sans-serif;
-
 }
-
 
 .background {
   display: table-cell;
@@ -23,13 +20,10 @@ section {
  display: table;
  margin: 0;
  max-width: none;
-
  height: 100vh;
 }
 
-
 .view1 {
-
   width: 100vw !important;
   display: table-cell;
   vertical-align: top;
@@ -40,14 +34,10 @@ section {
   overflow: hidden;
   color: black;
   -webkit-text-stroke-width: .5px;
-   -webkit-text-stroke-color: black;
-
+  -webkit-text-stroke-color: black;
 }
 
-
-
 .view2 {
-
   width: 100vw !important;
   text-align: right;
   display: table-cell;
@@ -61,11 +51,7 @@ section {
   padding-right: 5%;
   padding-left: 38% !important;
   text-emphasis-position: right;
-
-
 }
-
-
 
 .view3 {
   width: 100vw !important;
@@ -76,7 +62,6 @@ section {
   background-size: cover;
   overflow: hidden;
 }
-
 
 .logoBox {
   padding: 33%;
@@ -92,33 +77,28 @@ section {
 
 
 .about {
-
   font-size: 1.4em;
   line-height: 200%;
   /*padding: 10%;*/
   font-family: 'Cabin';
+  text-align: left;
 }
-
-
 
 .login {
   width: 15%;
   padding-right: 3%;
   float: right;
   margin-top: 0;
-    float: top;
+  float: top;
 }
 
 .inputStyle {
   color: black !important;
-
   opacity: .9;
-
 }
 
 
 .loginButton {
-
   float: inherit !important;
   margin-bottom: 2% !important;
   background-color: #c8bdbd !important;
@@ -128,13 +108,11 @@ section {
 
 
 .joinButton {
-
   float: inherit !important;
   margin-bottom: 1% !important;
   background-color: #c8bdbd!important;
   font-size: 1rem !important;
   color: black
-
 }
 
 .logoText {
@@ -143,13 +121,13 @@ section {
   font-size: 9.2rem !important;
   color: #C5DCEF;
   -webkit-text-stroke-width: 1.5px;
-   -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
 
 .about {
   color: black;
   -webkit-text-stroke-width: .5px;
-   -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
 
 .nextButton {
@@ -187,8 +165,7 @@ input::placeholder {
 .modal {
   margin-top: 10% !important;
   margin-left: 33% !important;
-
- text-align: center !important;
+  text-align: center !important;
   width: 40% !important;
   min-height: 45% !important;
 }
