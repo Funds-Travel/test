@@ -4,6 +4,7 @@
 /node_modules
 config.js
 .vscode
+.env
 
 # testing
 /coverage
