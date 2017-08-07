@@ -1,15 +1,18 @@
+require('dotenv').config();
+
+const PORT = process.env.PORT;
 const express = require('express');
 const expressSession = require('express-session');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
-const config = require('../config');
+// const config = require('.dotenv').config();
 const serverCtrl = require('./serverCtrl');
 const app = express();
 
 let db;
 
-massive(config.connectionString)
+massive(process.env.DATABASE_URL)
 .then(function(dbInstance) {
   db = dbInstance;
     app.set('db', dbInstance)
@@ -17,7 +20,7 @@ massive(config.connectionString)
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(expressSession({secret: config.sessionSecret,
+app.use(expressSession({secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false}))
 
@@ -26,6 +29,6 @@ app.get('/api/user/:email', serverCtrl.getUser)
 app.post('/api/traveler', serverCtrl.createTraveler)
 app.post('/api/addFunds/:user_id', serverCtrl.addFunds)
 
-app.listen(3001, function() {
+app.listen(process.env.PORT, function() {
     console.log("listening from Server")
 });
