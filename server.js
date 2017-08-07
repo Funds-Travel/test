@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
 // const config = require('.dotenv').config();
-const serverCtrl = require('./serverCtrl');
+const serverCtrl = require('./server/serverCtrl');
 const app = express();
 
 let db;
@@ -18,6 +18,10 @@ massive(process.env.DATABASE_URL)
     app.set('db', dbInstance)
 });
 
+// app.get('/', (req, res, next) => {
+//   res.sendFile(__dirname + '/../build/index.html')
+// })
+app.use(express.static(__dirname + '/build'))
 app.use(cors())
 app.use(bodyParser.json())
 app.use(expressSession({secret: process.env.SECRET,
