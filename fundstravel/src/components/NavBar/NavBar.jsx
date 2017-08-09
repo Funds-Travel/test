@@ -90,9 +90,10 @@ componentDidMount() {
 
   render() {
     return (
+
       <div className="container-fluid nav-container">
-        <div className="nav-side-menu col-sm-4 col-md-3">
-            <a href="#!" className="brand">Travel Funds</a>
+        <div className="nav-side-menu col-sm-2 col-md-3">
+            <a href="#!" className="brand brandTitle">Trip Funds</a>
             <i className="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
         <div className="menu-list">
@@ -110,11 +111,12 @@ componentDidMount() {
               <div className="navFunds">
                 <span className="gray-text">
                   <h3>Balance: ${this.state.balance}</h3>
-                  <h3>Goal: ${this.state.goal}</h3>
+                  <h3 >Goal: ${this.state.goal}</h3>
                   <br />
-                  <Modal header='Add Funds' trigger={
+                  <Modal className="modal1" header='Add Funds' trigger={
                     <Button className=" ">Add Funds</Button>
                   }>
+                  <br />
                     <Row>
                       <Input type="s" label="Add Funds" s={12}
                       value={this.state.newBalance}

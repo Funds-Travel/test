@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal, Row, Input } from 'react-materialize';
+
 import { bindActionCreators } from 'redux';
 import { postUser } from '../../actions/index';
 import { firebaseApp } from '../../firebase';
@@ -86,26 +87,26 @@ signIn() {
                    placeholder="Password"></input>
                    <br />
                   <button onClick={() => this.signIn()}
-                          className="waves-effect waves-light btn">Login</button>
+                          className="waves-effect waves-light btn">-Login-</button>
                 <br />
                 <br />
-                <Modal header='Create Account'
+                <Modal className="modal1 center-align" header='Create Account'
               	       trigger={
-              		<Button className='waves-effect waves-light btn'>Join!</Button>
+              		<Button className='waves-effect waves-light btn'>-Join!-</Button>
               	               }>
                   <Row>
-                    <Input placeholder="Placeholder" s={6} label="First Name" />
-                    <Input s={6} label="Last Name" />
-                    <Input type="password" label="password" s={12}
+                    <Input s={6} placeholder="First Name" />
+                    <Input s={6} placeholder="Last Name"  />
+                    <Input type="password" placeholder="Password"s={12}
                             value={this.state.password}
                             onChange={this.handlePassword}/>
-                    <Input type="password" label="confirm password" s={12}
+                    <Input type="password" placeholder="Confirm Password"  s={12}
                             value={this.state.confirm}
                             onChange={this.handleConfirm}/>
-                    <Input type="email" label="Email" s={12}
+                    <Input type="email" placeholder="Email" s={12}
                             value={this.state.email}
                             onChange={this.handleEmail}/>
-                    <button className=""
+                    <button className="modal"
                             onClick={event => this.handleClick(event)}>
                             {' '}Submit{' '}
                     </button>
@@ -121,14 +122,20 @@ signIn() {
        </section>
        <section>
          <div className="view2">
-           <h3 className="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum lacus sit amet enim pulvinar lacinia. Etiam facilisis neque vehicula, elementum tellus rhoncus, sollicitudin mi. Donec facilisis urna vitae justo tempor, ut euismod enim sodales. Nunc vel ullamcorper orci, eget lobortis lectus. Suspendisse potenti. Integer blandit nisl eget nunc congue interdum. Aliquam imperdiet magna non justo ultrices, sit amet bibendum dui aliquam. Donec non eleifend orci. Nunc finibus risus pulvinar orci tristique, ac volutpat est cursus.
+           <h2 className="about"> We started this project with the idea that the Travel industry has an actual niche that remains untapped. Our target demographic was the untraveled, the grandparent, the technically clumsy or easily stressed consumer that could not digest the massive options they were presented when browsing for travel.
+             <br />
+             <br/ >
 
-             Phasellus nisi nisl, tempor feugiat urna a, iaculis placerat turpis. Ut maximus euismod fermentum. Nam at felis maximus, cursus mauris quis, eleifend libero. Nam euismod, tellus vitae interdum consectetur, velit odio porttitor leo, ut sagittis nunc elit sed urna. Mauris suscipit, augue porta venenatis egestas,
-           </h3>
+Blasphemy? Not quite. Travel agencies have existed for centuries because consumers that could afford to, subscribe to the simplicity of travel options offered.
+
+<br />
+<br />
+Our app, although not specifically catered to that crowd is actually designed to perform the same exact functions. Whats more, we have designed it specifically for the wishful consumer,   allowing them to put funds aside and visually see what they can afford.
+           </h2>
             <div>
               <br />
               <br />
-              <button className="" onClick={this.scrollToView3}></button>
+
             </div>
           </div>
         </section>

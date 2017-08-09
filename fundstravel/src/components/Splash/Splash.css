@@ -29,28 +29,26 @@ section {
 
 
 .view1 {
-
+  padding-top: 1%;
   width: 100vw !important;
+  height: 100vh !important;
   display: table-cell;
   vertical-align: top;
-
-  padding-top: 1%;
   background-image: url('https://cdn.pixabay.com/photo/2016/10/18/08/13/travel-1749508_1280.jpg');
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
+  text-align: center;
   color: black;
   -webkit-text-stroke-width: .5px;
    -webkit-text-stroke-color: black;
-
 }
 
 
 
 .view2 {
-
   width: 100vw !important;
-  text-align: right;
+  text-align: left;
   display: table-cell;
   vertical-align: top;
   background-image: url('http://wallpapercave.com/wp/c8MSprE.jpg');
@@ -76,6 +74,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  text-align: center;
 }
 
 
@@ -94,10 +93,11 @@ section {
 
 .about {
 
-  font-size: 1.4em;
+  font-size: 1.5em;
   line-height: 200%;
   /*padding: 10%;*/
   font-family: 'Cabin';
+  padding-right: 1%;
 }
 
 
@@ -156,10 +156,10 @@ section {
 
 .nextButton {
   background-image:url('https://cdn4.iconfinder.com/data/icons/essential-app-2/16/down-menu-arrow-botton-64.png') !important;
-  position:absolute;
- z-index:100;
- left:50%;
- top:103em;
+  position: sticky;
+ z-index:101;
+ left:50vw !important;
+ top:99vh !important;
  width:9em;
  height:9em;
  border-radius:50%;
@@ -184,4 +184,24 @@ section {
 
 input::placeholder {
   color: black;
+}
+
+
+.modal {
+  margin-top: 10% !important;
+  margin-left: 33% !important;
+
+  text-align: center !important;
+  width: 40% !important;
+  min-height: 45% !important;
+}
+
+.header {
+  padding-left: 10% !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .login {
+    width: 40%;
+  }
 }
