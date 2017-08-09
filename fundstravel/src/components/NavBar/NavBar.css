@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 .nav-container {
   padding: 0;
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 .background {
   background-image: url('');
 }
@@ -9,6 +17,7 @@
 .signout_btn {
 
 }
+
 
 .navFix{
 position: fixed;
@@ -59,6 +68,7 @@ border: 0;
   font-family: verdana;
   font-size: 15px;
   font-weight: 200;
+<<<<<<< HEAD
   background-color: #2e353d;
   position: fixed;
   top: 0px;
@@ -68,6 +78,17 @@ border: 0;
 }
 .nav-side-menu .brand {
   background-color: #23282e;
+=======
+  background-color: #2e353d ;
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  color: #e1ffff ;
+
+}
+.nav-side-menu .brand {
+  background-color: #23282e ;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
   line-height: 50px;
   display: block;
   text-align: center;
@@ -97,6 +118,7 @@ border: 0;
 }
 .nav-side-menu ul .active,
 .nav-side-menu li .active {
+<<<<<<< HEAD
   border-left: 3px solid #d19b3d;
   background-color: #4f5b69;
 }
@@ -114,11 +136,34 @@ border: 0;
   border: none;
   line-height: 28px;
   border-bottom: 1px solid #23282e;
+=======
+  border-left: 3px solid #d19b3d ;
+  background-color: #4f5b69 ;
+}
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  color: #d19b3d ;
+}
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+  color: #d19b3d ;
+}
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+  background-color: #181c20 ;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e ;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
   margin-left: 0px;
 }
 .nav-side-menu ul .sub-menu li:hover,
 .nav-side-menu li .sub-menu li:hover {
+<<<<<<< HEAD
   background-color: #020203;
+=======
+  background-color: #020203 ;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 }
 .nav-side-menu ul .sub-menu li:before,
 .nav-side-menu li .sub-menu li:before {
@@ -131,12 +176,21 @@ border: 0;
 }
 .nav-side-menu li {
   padding-left: 0px;
+<<<<<<< HEAD
   border-left: 3px solid #2e353d;
   border-bottom: 1px solid #23282e;
 }
 .nav-side-menu li a {
   text-decoration: none;
   color: #e1ffff;
+=======
+  border-left: 3px solid #2e353d ;
+  border-bottom: 1px solid #23282e ;
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #e1ffff ;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 }
 .nav-side-menu li a i {
   padding-left: 10px;
@@ -144,8 +198,13 @@ border: 0;
   padding-right: 20px;
 }
 .nav-side-menu li:hover {
+<<<<<<< HEAD
   border-left: 3px solid #d19b3d;
   background-color: #4f5b69;
+=======
+  border-left: 3px solid #d19b3d ;
+  background-color: #4f5b69 ;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -166,7 +225,11 @@ border: 0;
     top: 10px;
     z-index: 10 !important;
     padding: 3px;
+<<<<<<< HEAD
     background-color: #ffffff;
+=======
+    background-color: #ffffff ;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
     color: #000;
     width: 40px;
     text-align: center;
@@ -190,26 +253,45 @@ body {
 }
 
 .navWelcome {
+<<<<<<< HEAD
 
 }
 
 .navFunds {
 
+=======
+  padding-top: 5%;
+}
+
+.navFunds {
+  padding-top: 10%;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 }
 
 button {
 
+<<<<<<< HEAD
   background-color: #67A3D3 !important;
+=======
+ background-color: #67A3D3 !important;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 }
 
 .modal {
   margin-top: 10% !important;
   margin-left: 33% !important;
 
+<<<<<<< HEAD
   text-align: center !important;
   width: 40% !important;
   min-height: 45% !important;
 }
+=======
+
+ text-align: center !important;
+  width: 40% !important;
+  min-height: 45% !important;
+>>>>>>> c36efec9e4de38f14b48fa421164f175d5c93a43
 
 .brandTitle {
   font-size: 2.5em !important;

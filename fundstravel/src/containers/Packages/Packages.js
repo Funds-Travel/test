@@ -27,7 +27,7 @@ class Packages extends Component {
           <div id="wrapper">
     <div id="slideshow">
       <p></p>
-    
+
     </div>
   </div>
           {myPackages}

@@ -1,11 +1,8 @@
 import React from 'react';
 import './Package.css'
 
-
-//need to make sure item is the correct reference...
 export default function Package({item}) {
   return (
-    
     <div className="col-sm-6 col-md-4 eachPackageDiv-container">
     <div className="eachPackageDiv">
       <a href= {item.link}>
@@ -54,20 +51,3 @@ export default function Package({item}) {
   </div>
   )
 }
-
-  // <div className= "eachPackageDiv"key={item.id}>
-  //
-  // <img className ="" src={item.hotel_image} alt={item.hotel_name}/>
-  //   <ul>
-  //     <li>
-  //       <div className="cityCountry"> {item.city_country} </div>
-  //     </li>
-  //   <li >
-  //     {item.hotel_name}<br />
-  //   </li>
-  //   <li className="price">
-  //    Total Price of ${item.total_price} <br /> {item.travelers} travelers
-  //    <br /><br /><br />
-  //   </li>
-  //   </ul>
-  // </div>

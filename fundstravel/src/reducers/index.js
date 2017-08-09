@@ -1,14 +1,16 @@
 import { combineReducers } from 'redux';
 import PostUserReducer from './reducer_postUser';
 import GetPackages from './reducer_getPackages';
-// import GetFunds from './reducer_getFunds';
+import AddFundsReducer from './reducer_addFunds';
+import GetUser from './reducer_getUser';
+
 
 
 const rootReducer = combineReducers({
   postUser: PostUserReducer,
   packet: GetPackages,
-  // funds: GetFunds
-
+  addFunds: AddFundsReducer,
+  user: GetUser
 });
 
 export default rootReducer;
