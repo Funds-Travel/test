@@ -7,7 +7,6 @@ import { postUser } from '../../actions/index';
 import { firebaseApp } from '../../firebase';
 
 import './Splash.css';
-import '../Join/Join.css';
 
 class Splash extends Component {
   constructor() {

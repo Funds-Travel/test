@@ -25,14 +25,11 @@ class Packages extends Component {
 
         <div className="allPackagesDiv row">
           <div id="wrapper">
-    <div id="slideshow">
-      <p></p>
-
-    </div>
-  </div>
-          {myPackages}
+            <div id="slideshow">
+            </div>
           </div>
-
+          {myPackages}
+        </div>
       )
     }
 }
