@@ -60,9 +60,55 @@ Command Line specific:
         It will ask for password.
 
 #3  Heroku Create
+        https://devcenter.heroku.com/articles/renaming-apps
         Heroku create
             - This will create a random generated app.
+            Renaming it?
+            - heroku apps:rename newname
+              - newname is whatever you want.
+            - git remote rm heroku
+            - heroku git:remote -a [app name]
+
         Adding a Database?
+        https://devcenter.heroku.com/articles/heroku-postgresql
             - heroku addons:create heroku-postgresql:hobby-basic
             Hobby basic is the free version database plan.
 
+            - heroku pg:info
+            - heroku pg:psql
+            - heroku pg:psql gray
+            - heroku pg:push mylocaldb HEROKU_POSTGRESQL_MAGENTA --app sushi
+              - mylocaldb is the name of the postgres db
+              - sushi is the name of the heroku app. In this case, your heroku create instance on line 67.
+            - Make sure to check your app settings within Heroku and document your config variables.
+              - example:
+                Key             VALUE
+                DATABASE_URL    whereever your database is pointing, or the key.
+                SECRET          whatever your session secret was.
+          
+          Ready to push?
+            - Make sure you have a ProcFile, if not then make one.
+              - what a Procfile should contain 
+                web: node server.js
+            - Make sure you have a .env file, if not then make one.
+              - what an env file should contain
+                DATABASE_URL=Where_your_database_is
+                SECRET=somerandomstring (whatever your session secret is)
+                PORT=3001 (whatever port is)
+            - Make sure you check your server.js/index./js as per:
+              - Line 1. (configure process.env)
+              - Line 9. (disable all configs/connectionStrings)
+              - Line 15.(massive needs to point to process.env.DATABASE_URL as per .env file)
+              - Line 24.(needs to point to the process.env.SECRET as per .env file)
+              - Line 33.(needs to listen to the PORT defined in process.env.PORT as per .env file)
+          
+          Run Yarn Build.
+          Remove /Build from .gitignore.
+          git push heroku master (to deploy)
+          Heroku open to start online instance hosting service.
+
+          Need help?
+          Heroku logs
+          Heroku restart.
+
+That's how you host on Heroku!
