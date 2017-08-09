@@ -18,9 +18,6 @@ massive(process.env.DATABASE_URL)
     app.set('db', dbInstance)
 });
 
-// app.get('/', (req, res, next) => {
-//   res.sendFile(__dirname + '/../build/index.html')
-// })
 app.use(express.static(__dirname + '/build'))
 app.use(cors())
 app.use(bodyParser.json())
