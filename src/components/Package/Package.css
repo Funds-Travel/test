@@ -96,3 +96,108 @@ img {
 
 
 }
+
+.topBackground {
+  height:430px;
+  width: 100%;
+  background-position: fixed;
+  background-image: url('http://www.publicdomainpictures.net/pictures/190000/velka/travel-background-1469438756vUG.jpg');
+}
+
+#wrapper {
+  width: 750px;
+  margin: auto 0;
+  margin-left: 1%;
+}
+
+#wrapper p {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+  font-family: "Arial Black", sans-serif;
+  text-shadow: 2px 2px #555;
+  margin:0;
+
+}
+
+#slideshow {
+  border: 1px solid #fff;
+  background: url(http://lab.mthibault.ca/external/img/roto01.jpg) no-repeat; /* this default image will show where browsers unable to process the [animation] function */
+  background-size: cover;
+  background-position: center;
+
+  width: 73vw;
+  height: 312px;
+  /* animation */
+  -webkit-animation: slider 40s infinite ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation: slider 40s infinite ease-in-out;
+  animation-direction:  normal;
+}
+
+@-webkit-keyframes slider {
+  /*0% {
+    background: url(http://lab.mthibault.ca/external/img/roto01.jpg);
+  }
+  25% {
+    background: url(http://lab.mthibault.ca/external/img/roto02.jpg);
+  }
+  50% {
+    background: url(http://lab.mthibault.ca/external/img/roto03.jpg);
+  }
+  100% {
+    background: url(http://lab.mthibault.ca/external/img/roto04.jpg);
+  }*/
+}
+
+@keyframes slider {
+  0% {
+    background: url(http://www.publicdomainpictures.net/pictures/190000/velka/travel-background-1469438756vUG.jpg);
+  }
+  15% {
+    background: url(http://www.loltour.com.ua/images/sampledata/icetheme/gallery/7.jpg);
+  }
+  30% {
+    background: url(https://c1.staticflickr.com/9/8050/8121412716_3963466d11_b.jpg);
+  }
+  45% {
+    background: url(http://www.twitrcovers.com/wp-content/uploads/2013/10/Rome-Colosseum-Historic-l.jpg);
+  }
+  60% {
+    background: url(http://images4.fanpop.com/image/photos/20100000/-beautiful-Japan-beautiful-places-20150792-1600-1200.jpg);
+  }
+  75% {
+    background: url(http://68.media.tumblr.com/tumblr_md1821D2vA1rdvzeho1_1280.jpg);
+  }
+  100% {
+    background: url(http://allswalls.com/images/ireland-background-wallpaper-2.jpg);
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #wrapper {
+    width: 90%;
+	margin:1em auto;
+  }
+
+  #wrapper p {
+ font-size: 1.25em;
+ letter-spacing:0.15em;
+ text-shadow: 2px 1px #000;
+ overflow:hidden;
+ }
+
+  #slideshow {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  #slideshow img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .logo {text-align:center;}
+}
